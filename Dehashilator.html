@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ospalh’s Anki2 addons – Dehashilator</title>
+
+        <link rel="stylesheet/less" type="text/css" href="/css/styles.less">
+        <script src="/scripts/less-1.3.0.min.js" type="text/javascript"></script>
+
+
+	<!-- Internet Explorer HTML5 enabling script: -->
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<style type="text/css">.clear {zoom: 1;display: block;}</style>
+	<![endif]-->
+</head>
+<body>
+  <section id="page">
+    <header>
+
+      <nav class="clear">
+	<ul>
+	  <li><a href="/">Home</a></li>
+          <li><a href="https://github.com/ospalh/anki-addons"
+                 class="code">GitHub project</a></li>
+          <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+          <li><a href="https://github.com/ospalh/anki-addons/zipball/master"
+                 class="download-button zip"><span>Project
+                 zipball</span></a></li>
+          
+<li><a href="https://github.com/ospalh/anki-addons/blob/master/dehashilate.py"
+       class="code">Add-on source</a></li>
+
+
+<li><a href="https://github.com/downloads/ospalh/anki-addons/dehashilator.zip"
+       class="code">Package download</a></li>
+
+
+	</ul>
+      </nav>
+
+
+    <h1>Dehashilator</h1>
+    
+    <h3>An Anki2 add-on</h3>
+    
+
+
+    </header>
+
+        
+<article id="dehashilator" class="clear">
+	<div class="articleBody">
+
+		<figure>
+		  <img src="/images/hashes.png"
+		       alt="Old and new file names." />
+		</figure>
+
+                
+                <p>Rename media files with names that look like MD5 hashes.
+<blockquote class=nb>This add-on is likely to break your
+collection. You <em>will</em> have to fix a few file names by hand.</blockquote></p>
+<p>Up to version 1.1, Anki changed the names of media files added to
+their <a href="http://en.wikipedia.org/wiki/MD5">MD5</a>
+<a href="http://en.wikipedia.org/wiki/Cryptographic hash function">hashes</a>.
+That meant that you had directories full of file names like
+<code>66a6565b69edcb65e7a083a4df1f0900.png</code> or
+<code>2304355e4eb95f078b2565352f2b5413.mp3</code>, that bore no relation to the
+fact they were used on.
+For decks that were created on these versions, those file names are
+still present in Anki 2 collections. </p>
+<p>While this is no real problem, it prevents you to identify a specific
+file without starting Anki, for example to edit a picture. It also
+bugged me personally.</p>
+<h2>Installation</h2>
+<p>To install, copy not only the
+<a href="https://github.com/ospalh/anki-addons/blob/master/dehashilate.py"><code>dehashilate.py</code></a>
+source file, but also the
+<a href="https://github.com/ospalh/anki-addons/blob/master/dehashilator"><code>dehashilator</code></a>
+directory to the <code>Anki/addons</code> folder.</p>
+<h2>Usage</h2>
+<p>Activate the <code>Tools/Dehashilate media</code> menu item.</p>
+<p>The dehashilation happens in two steps. First, the collection is
+scanned for hash-like file names, new names are calculated and
+shown. If you don’t like the suggested names, the only solution is to
+change the
+<a href="https://github.com/ospalh/anki-addons/blob/master/dehashilator/dehashilator.py">source</a>,
+especially the <code>name_source_fields</code> list.</p>
+<p>When you like the names and click “Yes” twice, the file will be
+renamed and field content changed. You should run the
+<code>Maintenance/Unused Media ...</code> menu item to find problems created by
+the dehashilation. You may also run the dehashilator again.  At one
+time it had problems with several hash-like media in a single field.</p>
+<h2>Notes</h2>
+<p>This was written as a one-of fix-my-collection-once add-on. As such,
+with my personal collection fixed, i am not really interrested in
+making this perfect. It will probably stay in its current, somewhat
+buggy, state. Others are welcome to do their own work or to send pull
+requests, but simple “it broke my collection” issue reports will be
+ignored.</p>
+<p>The name was inspired by the
+<a href="http://www.girlgeniusonline.com/comic.php?date=20021213">dihoxulator</a>. So
+was the <a href="http://www.girlgeniusonline.com/comic.php?date=20021218">stop button
+text</a>.</p>
+                
+	</div>
+
+</article>
+
+
+
+    <footer>
+      <div class="line"></div>
+      <span class="by"><a href="https://github.com/ospalh"><a href="https://github.com/ospalh">ospalh</a>
+      maintains <a href="https://github.com/ospalh/anki-addons">anki-addons</a></span>
+
+      <a href="http://tutorialzine.com/" class="tmpl">Original template: Tutorialzine</a>
+    </footer>
+  </section>
+
+</body>
+</html>

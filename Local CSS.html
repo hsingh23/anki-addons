@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ospalh’s Anki2 addons – Local CSS</title>
+
+        <link rel="stylesheet/less" type="text/css" href="/css/styles.less">
+        <script src="/scripts/less-1.3.0.min.js" type="text/javascript"></script>
+
+
+	<!-- Internet Explorer HTML5 enabling script: -->
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<style type="text/css">.clear {zoom: 1;display: block;}</style>
+	<![endif]-->
+</head>
+<body>
+  <section id="page">
+    <header>
+
+      <nav class="clear">
+	<ul>
+	  <li><a href="/">Home</a></li>
+          <li><a href="https://github.com/ospalh/anki-addons"
+                 class="code">GitHub project</a></li>
+          <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+          <li><a href="https://github.com/ospalh/anki-addons/zipball/master"
+                 class="download-button zip"><span>Project
+                 zipball</span></a></li>
+          
+<li><a href="https://github.com/ospalh/anki-addons/blob/master/local CSS.py"
+       class="code">Add-on source</a></li>
+
+<li><a href="http://beta.ankiweb.net/shared/info/2587372325"
+       class="code">AnkiWeb download</a></li>
+
+
+
+	</ul>
+      </nav>
+
+
+    <h1>Local CSS</h1>
+    
+    <h3>Adapt card styles to time and place</h3>
+    
+
+
+    </header>
+
+        
+<article id="localcss" class="clear">
+	<div class="articleBody">
+
+		<figure>
+		  <img src="/images/three_styles.png"
+		       alt="The same card with different styles" />
+		</figure>
+
+                
+                <p>This loads the local CSS file <code>user_style.css</code> and adds the style to the CSS set in the card templates.</p>
+<p>It also adds a few classes to the cards.</p>
+<p>With this, the look of the cards can be adapted to the time of day
+(night colors) and place (small fonts on small screens, big fonts on
+big screens, ...)</p>
+<h2>Set-up</h2>
+<p>The add-on loads the file <code>user_style.css</code> from the current profile’s
+directory, typically <code>Anki/User 1</code> or <code>Anki\User 1</code>.</p>
+<p>Typically the standard styling in the card template isn’t
+changed. Like this, reviewing on AnkiWeb and on mobile devices works
+as before.</p>
+<h3>Classes</h3>
+<p>The add-on adds the classes <code>loc</code> to all cards. The model and template
+names of each card are reduced to the characters <code>a</code> to <code>z</code>, <code>A</code> to <code>Z</code>, <code>0</code> to <code>9</code>
+and <code>_</code> and added as classes as well, in the form of <code>model_NN</code> and
+<code>template_NN</code>. As an example, the second card (<code>card1</code>) of a model or
+note type called “Satz Japanese 日本語” and that is called “Hörübung”
+would have the css classes <code>card card1 model_SatzJapanese
+template_Hrbung</code>. These classes can be used to build CSS selectors.</p>
+<h3>Standard use</h3>
+<p>To apply a style to the whole card only on a specific computer, use the
+<code>user_sytle.css</code> file on that computer. You should use the CSS selector
+<code>.loc.card</code>. The example in the bottom of the image was done with 
+<blockquote><pre><code>.loc.card{ 
+    font-family: Linux Biolinum O;
+    background-color: #ededff;
+    font-size: 58px;}</code></pre></blockquote></p>
+<blockquote class=nb> The selector in the style file must be more
+specific than the one used in the template in the collection. When a
+setup for <tt>.card</tt> is used in the template, the style file should use
+<tt>.loc.card</tt>, not just <tt>.loc</tt> </blockquote>
+
+<h3>Sub-elements</h3>
+<p>The easiest way to select only parts of a card is to add classes with
+the <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> elements. For example a
+Japanese answer can be written as <code>&lt;div class="nihongo"&gt;{{furigana:Japanese}}&lt;/div&gt;</code> in the back template of a card.</p>
+<p>Then, different Japanese fonts can be selected on different computers
+by using <tt>.loc .nihongo{font-family: <a href="http://ossipedia.ipa.go.jp/ipafont/index.html">IPAPMincho</a>;}</tt> in one style file
+and <tt>.loc .nihongo{font-family: "<a href="http://cooltext.com/Download-Font-%E6%9C%88+Moon">Moon font</a>";}</tt> in another.</p>
+<blockquote class=nb>
+As the <tt>loc</tt> and <tt>card</tt> apply to the same object, the selector
+<tt>.loc.card</tt> contains <em>no</em> space. When setting the style for a
+sub-element, a space <em>must</em> be added. For example, to change the style of the
+Japanese text, use <tt>.loc .nihongo</tt> with a space between
+the <tt>c</tt> and the <tt>.</tt>.
+</blockquote>
+
+<h2>Different cards</h2>
+<p>Applying different styles to different cards works in a similar way.</p>
+<p>As an example, i use a standard style of black on light blue for
+standard cards and black ond light red for grammar cards. In the
+alternative style i use light colored text on dark background, dark
+green for normal cards and dark red for grammar cards. The standard
+cards use the the <code>.loc.card</code> selector described above. The model name
+of the grammar cards is “Grammatik VHS — Japanese” and so i use
+<blockquote><pre><code>.loc.card.model_grammatikvhsjapanese{
+    background-color: #64354c;
+    color: #d9b7ce;}</code></pre></blockquote>
+to set up the pink-on-dark-red.</p>
+<h2>Night and day</h2>
+<p>To use different styles at different times, for example a
+black-on-white scheme during the day and a light-on-dark scheme in the
+evening, simply have two style files like <code>day_user_style.css</code> and
+<code>night_user_style.css</code> handy and replace the file <code>user_style.css</code>
+with the fitting one. On file systems that support them (i.e. basically
+anywhere but on Windows systems), soft links can be used instead: <code>ln
+-sf day_user_style.css user_style.css</code>.</p>
+<h3>Reloading</h3>
+<p>The user style is loaded when the profile is opend. To reload the
+style afer a change go to the “Switch Profiles” dialog and re-open the
+profile.</p>
+                
+	</div>
+
+</article>
+
+
+
+    <footer>
+      <div class="line"></div>
+      <span class="by"><a href="https://github.com/ospalh"><a href="https://github.com/ospalh">ospalh</a>
+      maintains <a href="https://github.com/ospalh/anki-addons">anki-addons</a></span>
+
+      <a href="http://tutorialzine.com/" class="tmpl">Original template: Tutorialzine</a>
+    </footer>
+  </section>
+
+</body>
+</html>
