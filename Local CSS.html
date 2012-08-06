@@ -4,8 +4,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Ospalh’s Anki2 addons – Local CSS</title>
 
-        <link rel="stylesheet/less" type="text/css" href="/css/styles.less">
-        <script src="/scripts/less-1.3.0.min.js" type="text/javascript"></script>
+        <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
+        <script src="/anki-addons/scripts/less-1.3.0.min.js" type="text/javascript"></script>
 
 
 	<!-- Internet Explorer HTML5 enabling script: -->
@@ -20,14 +20,14 @@
 
       <nav class="clear">
 	<ul>
-	  <li><a href="/">Home</a></li>
+	  <li><a href="/anki-addons/">Home</a></li>
           <li><a href="https://github.com/ospalh/anki-addons"
                  class="code">GitHub project</a></li>
           <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
           <li><a href="https://github.com/ospalh/anki-addons/zipball/master"
                  class="download-button zip"><span>Project
                  zipball</span></a></li>
-          
+
 <li><a href="https://github.com/ospalh/anki-addons/blob/master/local CSS.py"
        class="code">Add-on source</a></li>
 
@@ -41,23 +41,23 @@
 
 
     <h1>Local CSS</h1>
-    
+
     <h3>Adapt card styles to time and place</h3>
-    
+
 
 
     </header>
 
-        
+
 <article id="localcss" class="clear">
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/images/three_styles.png"
+		  <img src="/anki-addons/images/three_styles.png"
 		       alt="The same card with different styles" />
 		</figure>
 
-                
+
                 <p>This loads the local CSS file <code>user_style.css</code> and adds the style to the CSS set in the card templates.</p>
 <p>It also adds a few classes to the cards.</p>
 <p>With this, the look of the cards can be adapted to the time of day
@@ -80,8 +80,8 @@ template_Hrbung</code>. These classes can be used to build CSS selectors.</p>
 <h3>Standard use</h3>
 <p>To apply a style to the whole card only on a specific computer, use the
 <code>user_sytle.css</code> file on that computer. You should use the CSS selector
-<code>.loc.card</code>. The example in the bottom of the image was done with 
-<blockquote><pre><code>.loc.card{ 
+<code>.loc.card</code>. The example in the bottom of the image was done with
+<blockquote><pre><code>.loc.card{
     font-family: Linux Biolinum O;
     background-color: #ededff;
     font-size: 58px;}</code></pre></blockquote></p>
@@ -129,7 +129,7 @@ anywhere but on Windows systems), soft links can be used instead: <code>ln
 <p>The user style is loaded when the profile is opend. To reload the
 style afer a change go to the “Switch Profiles” dialog and re-open the
 profile.</p>
-                
+
 	</div>
 
 </article>
