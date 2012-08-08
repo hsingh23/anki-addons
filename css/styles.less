@@ -6,6 +6,8 @@
 @fradius: 10px;
 @slradius: 3px;
 
+
+@qt-color: desaturate(spin(@a-color, -60), 50%);
 *{
 	/* Universal reset: */
 	margin:0;
@@ -21,7 +23,8 @@ figure{
 }
 
 body{
-	/* Setting the default text color, size, page background and a font stack: */
+	/* Setting the default text color, size, page background and a font
+stack: */
 	color: @fg-color;
 	background-color:@bg-bg-color;
 	font-family: "Praxis LT", "Linux Biolium",  sans-serif;
