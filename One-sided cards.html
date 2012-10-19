@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Ospalh’s Anki2 addons – Show colored stroke order diagrams</title>
+	<title>Ospalh’s Anki2 addons – One-sided cards</title>
         <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
         <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
         <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
@@ -26,7 +26,7 @@
           <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
           <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
           
-<li><a href="https://github.com/ospalh/anki-addons/blob/master/Show colored stroke order diagram.py"
+<li><a href="https://github.com/ospalh/anki-addons/blob/master/One-sided cards.py"
        class="code">Add-on source</a></li>
 
 
@@ -34,42 +34,29 @@
 	</ul>
       </nav>
 
-    <h1>Show colored stroke order diagrams</h1>
+    <h1>One-sided cards</h1>
     
     <h3>An Anki2 add-on</h3>
     
 
     </header>
         
-<article id="csod" class="clear">
+<article id="oneside" class="clear">
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/anki-addons/images/palette_gimped.png"
-		       alt="The idea is to pick the stroke colors from an image file." />
+		  <img src="/anki-addons/images/frontside.png"
+		       alt="Use `{{FrontSide}}` as the back template." />
 		</figure>
 
                 
-                <p>This is a work in progress that is intended to replace my
-<a href="/Kanji stroke colour.html">Kanji stroke color</a> add-on and possibly
-coexist with <a href="http://cayennes.github.com">cayennes</a>’
-<a href="https://github.com/cayennes/kanji-colorize/tree/master/anki">add-on</a>,
-this one used on desktop clients, cayennes’ on AnkiWeb and mobile
-devices.</p>
-<h3>Goals</h3>
-<ul>
-<li>Use one xml file as the data base.</li>
-<li>Extract svgs from that xml and colorize on the fly</li>
-<li>Make it possible to use different colors at different times, by
-  using an image as template.</li>
-<li>Add other effects, such as shadows, or possibly animation, on the fly. Again, with
-  different parameters at different times.</li>
-<li>Use this as a normal template or to replace the svgs/images from
-  cayennes’ add-on</li>
-</ul>
-<h2>Data set</h2>
-<p>This uses the <a href="http://kanjivg.tagaini.net/">KanjiVG</a> kanji stroke
-order data set as the base.</p>
+                <p>When the back side of a card is exactly <code>{{FrontSide}}</code>, go directly
+to the back side. This can be used for cards that describe a
+task. Like this, you save the time of clicking on the Show Answer
+button.</p>
+<p>This add-on works somewhat, but there may be a few problems with the
+first card. I don't use this, so i will not spend too much time fixing
+the problem.</p>
                 
 	</div>
 

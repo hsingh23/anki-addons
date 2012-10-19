@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Ospalh’s Anki2 addons – Metric time</title>
+	<title>Ospalh’s Anki2 addons – Show colored stroke order diagrams</title>
         <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
         <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
         <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
@@ -26,7 +26,7 @@
           <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
           <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
           
-<li><a href="https://github.com/ospalh/anki-addons/blob/master/Metric time.py"
+<li><a href="https://github.com/ospalh/anki-addons/blob/master/Show colored stroke order diagram.py"
        class="code">Add-on source</a></li>
 
 
@@ -34,49 +34,42 @@
 	</ul>
       </nav>
 
-    <h1>Metric time</h1>
+    <h1>Show colored stroke order diagrams</h1>
     
     <h3>An Anki2 add-on</h3>
     
 
     </header>
         
-<article id="metrictime" class="clear">
+<article id="csod" class="clear">
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/anki-addons/images/Studied in days.png"
-		       alt="The time studied is shown in days, not hours." />
+		  <img src="/anki-addons/images/palette_gimped.png"
+		       alt="The idea is to pick the stroke colors from an image file." />
 		</figure>
 
                 
-                <p>This add-on is just me riding my favorite hobby horse,
-<a href="http://en.wikipedia.org/wiki/Decimal_time#Fractional
-days">metric time</a>.
-I think splitting days into hours, minutes and seconds is about as
-silly as splitting lengths into inches, feet, yards, rods, chains and
-miles or using pounds and ounces and stones and who-knows-what else for
-mass. (Or weight. Better not go
-<a href="http://en.wikipedia.org/wiki/Slug (mass)">there</a>! And how much is a
-<a href="http://en.wikipedia.org/wiki/Gallon">gallon</a>‽)</p>
-<blockquote class="nb">
-This add-on assumes that a complete Python is installed. It will not
-work with just Anki installed. Specifically, it uses the decimal
-module, which is part of the Python standard library, but not included
-with Anki.
-</blockquote>
-
-<p>This add-on replaces the standard time-formating function with one
-that returns times shorter than a year as days – even times much
-shorter than a day. Longer times are written as years with one decimal
-place.</p>
-<h3>AnkiDroid</h3>
-<p>Daring spirits can use my
-<a href="https://github.com/ospalh/Anki-Android/tree/metric-time">variant</a> of
-<a href="https://github.com/nicolas-raoul/Anki-Android">AnkiDroid</a>. I have
-added the equvalent of this addon, showing times as fractinal days in
-AnkiDroid. You should merge this branch into the newest version of
-AnkiDroid, not just use that branch as-is.</p>
+                <p>This is a work in progress that is intended to replace my
+<a href="Kanji stroke colour.html">Kanji stroke color</a> add-on and possibly
+coexist with <a href="http://cayennes.github.com">cayennes</a>’
+<a href="https://github.com/cayennes/kanji-colorize/tree/master/anki">add-on</a>,
+this one used on desktop clients, cayennes’ on AnkiWeb and mobile
+devices.</p>
+<h3>Goals</h3>
+<ul>
+<li>Use one xml file as the data base.</li>
+<li>Extract svgs from that xml and colorize on the fly</li>
+<li>Make it possible to use different colors at different times, by
+  using an image as template.</li>
+<li>Add other effects, such as shadows, or possibly animation, on the fly. Again, with
+  different parameters at different times.</li>
+<li>Use this as a normal template or to replace the svgs/images from
+  cayennes’ add-on</li>
+</ul>
+<h2>Data set</h2>
+<p>This uses the <a href="http://kanjivg.tagaini.net/">KanjiVG</a> kanji stroke
+order data set as the base.</p>
                 
 	</div>
 
