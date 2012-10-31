@@ -80,8 +80,8 @@ build CSS selectors.</p>
     font-size: 58px;}</code></pre></blockquote></p>
 <blockquote class=nb> The selector in the style file must be more
 specific than the one used in the template in the collection. When a
-setup for <tt>.card</tt> is used in the template, the style file should use
-<tt>.loc.card</tt>, not just <tt>.loc</tt> </blockquote>
+setup for `.card` is used in the template, the style file should use
+`.loc.card`, not just `.loc` </blockquote>
 
 <h3>Sub-elements</h3>
 <p>The easiest way to select only parts of a card is to add classes with
@@ -89,17 +89,17 @@ the <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> elements. For example 
 written as <code>&lt;div class="nihongo"&gt;{{furigana:Japanese}}&lt;/div&gt;</code> in the
 back template of a card.</p>
 <p>Then, different Japanese fonts can be selected on different computers
-by using <tt>.loc .nihongo{font-family:
-<a href="http://ossipedia.ipa.go.jp/ipafont/index.html">IPAPMincho</a>;}</tt> in
-one style file and <tt>.loc .nihongo{font-family:
-"<a href="http://cooltext.com/Download-Font-%E6%9C%88+Moon">Moon font</a>";}</tt>
+by using <code>.loc .nihongo{font-family:
+<a href="http://ossipedia.ipa.go.jp/ipafont/index.html">IPAPMincho</a>;}</code> in
+one style file and <code>.loc .nihongo{font-family:
+"<a href="http://cooltext.com/Download-Font-%E6%9C%88+Moon">Moon font</a>";}</code>
 in another.</p>
 <blockquote class=nb>
-As the <tt>loc</tt> and <tt>card</tt> apply to the same object, the
-selector <tt>.loc.card</tt> contains <em>no</em> space. When setting
+As the `loc` and `card` apply to the same object, the
+selector `.loc.card` contains <em>no</em> space. When setting
 the style for a sub-element, a space <em>must</em> be added. For
 example, to change the style of the Japanese text, use <tt>.loc
-.nihongo</tt> with a space between the <tt>c</tt> and the <tt>.</tt>.
+.nihongo</tt> with a space between the `c` and the `.`.
 </blockquote>
 
 <h2>Different cards</h2>
