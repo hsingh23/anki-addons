@@ -11,7 +11,7 @@
     <!-- Internet Explorer HTML5 enabling script: -->
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <style type="text/css">.clear {zoom: 1;display: block;}</style>
+    <style type="text/css"> .clear {zoom: 1;display: block;} figure img{display:block;} </style>
     <![endif]-->
   </head>
   <body>
@@ -21,13 +21,14 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/anki-addons/">Anki add-ons</a></li>
+            
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
             <li><a href="https://github.com/ospalh/anki-addons/blob/master/Compare%20to%20kana.py" class="code">Add-on source</a></li>
 
-            <li><a href="http://beta.ankiweb.net/shared/info/4091556602" class="code">AnkiWeb download</a></li>
+            <li><a href="https://ankiweb.net/shared/info/4091556602" class="code">AnkiWeb download</a></li>
 
 
           </ul>
@@ -44,8 +45,8 @@
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/anki-addons/images/compare_to_kana.png"
-		       alt="The typed-in answer was compared to the kana only." />
+		  <img src="/anki-addons/images/compare_to_kana.png" alt="Anki review window. Three lines of Text: 1 Polizeirevier: 2 警察署 with furigana けいさつしょ 3 けいさつしょ marked in green" />
+		  <figcaption>The typed-in answer was compared to the kana only.</figcaption>
 		</figure>
 
                 
@@ -67,9 +68,11 @@ the kana part of the stored text.</p>
 and the field name contains “Reading”. Use <code>{{type:Reading}}</code> or
 <code>{{type:NN Reading}}</code> in your cards.</p>
 <h2>“Correct answer was:”</h2>
-<figure style="width:410px;"><img
-src="images/compare%20full%20reading.png" alt="Correctly typed reading and
-lots of red.">
+<figure>
+<img src="images/compare%20full%20reading.png" alt="Anki review
+window. Five lines of Text: 1 Polizeirevier: 2 警察署 with furigana
+けいさつしょ 3 -- in red, けい in green, --- in red, さつ in green, ---
+in red, しょ in green, - in red 4 Correct answer was: 5 警[けい]察[さつ]署[しょ]">
 <figcaption>Even though the reading was typed correctly there is a lot
 of red and extra text.</figcaption></figure>
 

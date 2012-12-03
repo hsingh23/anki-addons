@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Ospalh’s Anki2 addons – Somebody else&#39;s problem</title>
+    <title>Ospalh’s Anki2 addons – Somebody else’s problem</title>
     <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
     <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
     <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
@@ -11,7 +11,7 @@
     <!-- Internet Explorer HTML5 enabling script: -->
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <style type="text/css">.clear {zoom: 1;display: block;}</style>
+    <style type="text/css"> .clear {zoom: 1;display: block;} figure img{display:block;} </style>
     <![endif]-->
   </head>
   <body>
@@ -21,6 +21,7 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/anki-addons/">Anki add-ons</a></li>
+            
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
@@ -31,7 +32,7 @@
           </ul>
         </nav>
       
-    <h1>Somebody else&#39;s problem</h1>
+    <h1>Somebody else’s problem</h1>
     
     <h3>An Anki2 add-on</h3>
     
@@ -42,15 +43,15 @@
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/anki-addons/images/ipu.png"
-		       alt="An SEP-field is an easy way to make things invisible" />
+		  <img src="/anki-addons/images/ipu.png" alt="This should be a unicorn that is both pink and invisible." />
+		  <figcaption>An SEP-field is an easy way to make things invisible.</figcaption>
 		</figure>
 
                 
                 <p>This is a quick hack to hide field content only on the desktop client.</p>
-<p>Put fields you don't want to see on the desktop into <code>{{sep:NN}}</code>
+<p>Put fields you don’t want to see on the desktop into <code>{{sep:NN}}</code>
 templates, and they become
-<a href="http://hitchhikers.wikia.com/wiki/Somebody_Else%27s_Problem_field">somebody else's problem</a>.</p>
+<a href="http://hitchhikers.wikia.com/wiki/Somebody_Else%27s_Problem_field">somebody else’s problem</a>.</p>
 <p>On AnkiWeb and AnkiDroid (and AnkiMobile), the template is unknown and
 default behaviour is to show the text without modification – the field
 becomes visible again.</p>
@@ -65,7 +66,7 @@ hidden with clever CSS:</p>
 in the card CSS.</p>
 <p>The
 <a href="https://groups.google.com/forum/?fromgroups=&amp;hl=en#!topic/ankisrs/jK3Jh4EzwKE">problem</a>
-was that i didn't want to copy a bunch of video files to my Android
+was that i didn’t want to copy a bunch of video files to my Android
 device to save FAT
 <a href="http://en.wikipedia.org/wiki/File_Allocation_Table#VFAT_long_file_names">directory entries</a>,
 which are in short supply if you have a collection with many files

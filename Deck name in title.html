@@ -11,7 +11,7 @@
     <!-- Internet Explorer HTML5 enabling script: -->
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <style type="text/css">.clear {zoom: 1;display: block;}</style>
+    <style type="text/css"> .clear {zoom: 1;display: block;} figure img{display:block;} </style>
     <![endif]-->
   </head>
   <body>
@@ -21,13 +21,14 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/anki-addons/">Anki add-ons</a></li>
+            
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
             <li><a href="https://github.com/ospalh/anki-addons/blob/master/Deck%20name%20in%20title.py" class="code">Add-on source</a></li>
 
-            <li><a href="http://beta.ankiweb.net/shared/info/3895972296" class="code">AnkiWeb download</a></li>
+            <li><a href="https://ankiweb.net/shared/info/3895972296" class="code">AnkiWeb download</a></li>
 
 
           </ul>
@@ -44,8 +45,8 @@
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/anki-addons/images/deck_title.png"
-		       alt="The window title shows a deck name." />
+		  <img src="/anki-addons/images/deck_title.png" alt="A winwodw title: “Lernen::1 日本語::1 和独::VHS – Anki”" />
+		  <figcaption>The window title shows a deck name.</figcaption>
 		</figure>
 
                 
@@ -54,7 +55,8 @@ title.</p>
 <p>When there is more than one profile, it also shows the current profile name.</p>
 <h3>Setup</h3>
 <p>The behavior of the add-on can be changed in two points by editing
-the source file:</p>
+the
+<a href="https://github.com/ospalh/anki-addons/blob/master/Deck%20name%20in%20title.py">source file</a>:</p>
 <ul>
 <li>title_separator: What to print between the deck name and program
   name. Normally a spaced n-dash.</li>

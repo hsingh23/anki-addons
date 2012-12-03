@@ -13,7 +13,7 @@
     <!-- Internet Explorer HTML5 enabling script: -->
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <style type="text/css">.clear {zoom: 1;display: block;}</style>
+    <style type="text/css"> .clear {zoom: 1;display: block;} figure img{display:block;} </style>
     <![endif]-->
   </head>
   <body>
@@ -23,11 +23,14 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/anki-addons/">Anki add-ons</a></li>
+            
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
             <li><a href="https://github.com/ospalh/anki-addons/blob/master/Download%20audio.py" class="code">Add-on source</a></li>
+
+            <li><a href="https://ankiweb.net/shared/info/3100585138" class="code">AnkiWeb download</a></li>
 
 
           </ul>
@@ -35,7 +38,7 @@
       
     <h1>Download audio</h1>
     
-    <h3>An Anki2 add-on</h3>
+    <h3>Hear what you learn</h3>
     
 
       </header>
@@ -44,68 +47,257 @@
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/anki-addons/images/Downloaded%20audio.png"
-		       alt="Reviewing downloaded audio files." />
+		  <img src="/anki-addons/images/Downloaded%20audio.png" alt="A dialog window. Six lines with different site icons, the word “hearth” and some more buttons. A bubble help with the text Source text: hearth From field: Front Source: Macmillan Variant: British" />
+		  <figcaption>One word where non-native speakers should look up the pronunciation.</figcaption>
 		</figure>
 
                 
-                <p>Automatically download audio from Google TTS and Japanesepod.</p>
-<p>This add-on adds three menu items, “Note audio”, “Side audio” and
-“Manual audio”, that all try to download audio in slightly different
-manners.</p>
-<h2>Please be patient</h2>
-<p>While the add-on is pretty much finished, this manual page is
-not. Please be patient.</p>
-<h2>Fields</h2>
-<p>The download mechanism looks for audio fields to store the information
-in, according to two rules:</p>
+                <p>This add-on adds three menu items,</p>
 <ul>
-<li>When there is a field called “<span class="qtbase
-  ignorecase">Expression</span>”, “<span class="qtbase
-  ignorecase">Front</span>”, or “<span class="qtbase
-  ignorecase">Back</span>”, the add-on looks for a field called “<span
-  class="qtbase ignorecase">Audio</span>” or “<span class="qtbase
-  ignorecase">Sound</span>”.</li>
-<li>For other fields, the add-on looks for a second field with the same
-  name with “Audio” or “Sound” added. Like this, one note can store
-  different audio files for different fields. For example, a geography
-  deck can have fields “Country” and “Capital”. When that note
-  also has fields “Country Audio” and “Capital Audio”, the add-on can
-  download pronunciation for these two fields separately.</li>
+<li>“Edit/Media/Note audio”</li>
+<li>“Edit/Media/Side audio” and</li>
+<li>“Edit/Media/Manual audio”,</li>
 </ul>
-<h3>Japanesepod</h3>
-<p>Downloading Japanese pronunciations from Japanesepod works a little
-bit different. The field must be set up in the way used by the
-Japanese support addon, that is, there should be a “<span class="qtbase
-  ignorecase">Reading</span>” field and an “Audio” or “Sound”
-field. The reading field must contain both the kanji and kana for
-the requested word, with the reading for the kanji in square
-brackets. For example as 「仮定[かてい]」, which will be automatically
-split into 「仮定」 and 「かてい」.</p>
-<p>Alternative names for “Reading” are “Kana”, 「かな」and 「仮名」.</p>
-<p>Also, when “Audio” is just a substring, that substring is replaced
-with “Reading”, not removed. For example, when you have a field
-“Japanese Audio”, you need another field “Japanese Reading”.</p>
-<h2>Manual, note, side</h2>
-<p>Two of the three download modes, note and side mode, immediately
-download the audio when triggered. The note mode checks all the fields
-of the card and downloads for suitable fields. The side mode only
-downloads files for the visible side of the current card.</p>
+<p>All three try to download audio in slightly different manners from a
+number of sources. It also adds a button to the edit card screens to
+download from there.
+<span class="clear" /></p>
+<h2>First start – Language</h2>
+<figure>
+<img src="images/Set%20language.png" alt="A Dialog window. Text: Set
+download language code Set the code of the language you are
+learning. (zh for Chinese, en for English ...) Below a text input line
+with text ja.">
+<figcaption>Set the code of the language you are learning on
+startup.</figcaption>
+</figure>
+
+<p>The <span class="qtbase nolangcode">first time</span> you <span
+class="qtbase profload">start</span> Anki after downloading the
+add-on, a dialog will appear asking for a language code. Here you
+should select the language you are learning, not your native language.</p>
+<blockquote class="nb">When setting the language, use language
+codes. Do <em>not</em> use country domain names. For example, use
+<code>zh</code> for Chinese, <em>not</em>
+<code>cn</code>.</blockquote>
+
+<p>A list of audio codes can – unsprprisingly – be found at
+<a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">Wikipedia</a>.</p>
+<h2>Setup – Fields</h2>
+<p>This add-on adds the pronunciation to a field named “Audio”. You will
+probably have to <a href="Add%20audio%20field.html">add this field</a> to your notes.
+This has to be done for each note type you use.</p>
+<p>More sophisticated uses are also possible. Interested users can look
+at the <a href="Detailed%20audio%20field%20rules.html">detailed rules</a> on field
+selection for hints on how to use more then one pronunciation per
+note.</p>
+<h2>Setup – Cards</h2>
+<p>To use the downloaded data, you have to
+<a href="Add%20audio%20to%20cards.html">add the field</a> to a card.</p>
+<p>Here, too, more sophisticated uses are described on an
+<a href="More%20audio%20cards.html">extra page</a>.</p>
+<h2>Downloading</h2>
+<figure>
+<img src="images/manual_audio.png" alt="Anki with a card shown and the
+mouse pointing to the menu item
+Edit/Media/Manual audio.">
+<figcaption>Use these menus when reviewing.</figcaption>
+</figure>
+
+<p>When reviewing, select one of the three “Edit/Media/Note audio”,
+“Edit/Media/Side audio” and “Edit/Media/Manual audio” menu items to
+download.</p>
+<p>When editing or adding cards, click the <span class="qtbase
+sendicons">megaphone</span> button above the field edit list to do a
+manual download.</p>
+<h3>Side audio</h3>
+<p>Side audio loads audio that will appear on the currently visible
+side. During the <a href="#review">review</a>, it will hide the text it used to
+get the sounds. Use this while learning from your native language to
+the foreign language, or when trying to recoginize spoken words.</p>
+<h3>Note audio</h3>
+<p>Note audio fetches sounds for all audio fields of the current note.
+During the <a href="#review">review</a>, the texts used to
+retrieve the sounds are shown.</p>
+<h3>Manual audio</h3>
+<figure>
+<img src="images/update_annex.png" alt="Anki Download audio dialog
+window. Text: Requestst send to the download sites. Front. Edit text:
+to annex. The to is marked..">
+<figcaption>Edit the request before it is send.</figcaption>
+</figure>
+
+<p>Manual audio mode opens a dialog showing all fields where files can be
+downloaded. The texts, as well as the language to use, can be changed
+before the request is send.</p>
+<p><span  class="clear" />
+<figure>
+<img src="images/update_kanji_kana.png" alt="Anki Download audio dialog
+window. Text: Requestst send to the download sites. Reading. Edit texts:
+夫 おっと, Text: Expression. Edit text 夫.">
+<figcaption>Edit Japanese text.</figcaption>
+</figure>
+When learning Japanese or Chinese, when there is a “Reading” field,
+the text used as request and shown in the dialog is split into the
+base text and the reading.</p>
+<p>For Chinese the base text is usually just hanzi, the reading
+pinyin. For Japanese, the screen text calls the base text “kanji” for
+simplicity, but it often contains kana as well.</p>
+<p>For decks like that shown in in the first example
+you should use the “Note audio” mode: most dictionaries have
+pronunciations for verbs without “to” and for nouns without
+article. Delete these in the note audio dialog. For example download for
+“annex”, not for “to annex”.</p>
+<p>Along with the edit field or fields for the request text, the edit
+dialog also as a field to set the  language code. This can be used to
+download in a language different from that set for the current deck,
+even when the <a href="#tags">tag</a> is not set for the current note.</p>
+<h2><span id="review">Review</span></h2>
+<p>When the add-on could not find anything to download, a brief
+notification appears.</p>
+<figure><img src="images/devise.png"
+alt="The review dialog. The buttons are described in the main text">
+<figcaption>Decide what to do whith each file.</figcaption>
+</figure>
+
+<p>After a successful download, a dialog appears. It lists the
+retrieved audio clips, one per row.  The icon for each shows the
+source, Hovering over the icon or the word shows some information
+about the file.</p>
+<p>Each row has a number of buttons, one or two play buttons and three or
+four radio buttons.</p>
+<p>The left (or only) play button plays the newly retrieved file. If
+there is a second play button, the field where the new audio clip will
+be added is not empty. Clicking this button plays the old field
+content.</p>
+<p>To the right, there are three or four radio buttons. Select one for
+each line. They determine what happens to the downloaded file.</p>
+<ul>
+<li>The <em>add</em> check mark. When this button is down the audio clip will
+  be added to the card. This is the normal thing to select for a good
+  download, but when many files were downloaded, you may want to
+  add only a few of them.</li>
+<li>The <em>keep</em> <span class="qtbase sendicons">question mark</span>
+  icon. When this button is down, the add-on will neither add the file
+  to the card nor delete it but keep it in the media collection
+  folder. This means the file will show up as an unused medium and may
+  be deleted during an unused media check.</li>
+<li>The <em>delete</em> cross mark button. When this button is down the audio
+  clip will be deleted. This is the normal thing to do with a file you
+  don’t like.</li>
+<li>There may be a <em>blacklist</em> skull-and-bones button. When this is
+  down, the same file will be dropped in the future. See
+  <a href="Downloader%20sites.html#blacklist">blacklist</a> for more information.</li>
+</ul>
+<h2>Languages</h2>
+<h3>Changing languages</h3>
+<p>After the start, the language code can be
+<a href="Setting%20deck%20options.html">changed in the deck options</a>,
+under the general tab. This can be done separately for each
+options group. Like this, it is possible to use different download
+languages with different decks. See also the
+<a href="http://ankisrs.net/docs/dev/manual.html#deckoptions">Anki manual</a>.</p>
+<h3><span id="tags">Using tags</span></h3>
+<p>When a note has a tag in the form “<code>lang_&lt;NN&gt;</code>” (e.g. “<code>lang_en</code>” for
+English, “<code>lang_zh</code>” Chinese), this language code (that is “<code>en</code>” or
+ “<code>zh</code>”) is used for the download.</p>
+<h3>Supported languages</h3>
+<p>The languages this add-on supports depends on the languages of the
+dictionaries used.</p>
+<p>At the moment, you can get pronunciations for</p>
+<ul>
+<li>Chinese (Mandarin, i think) (<code>zh</code>)  from <a href="http://leo.org">LEO.org</a>,</li>
+<li>English (<code>en</code>) from <a href="http://beolingus.org">BeoLingus</a>,
+  <a href="http://leo.org">LEO.org</a>,
+  <a href="http://www.macmillandictionary.com/dictionary/">Macmillan Dictionary</a> and
+  <a href="http://merriam-webster.com">Merriam-Webster</a></li>
+<li>French (<code>fr</code>) from <a href="http://leo.org">LEO.org</a></li>
+<li>German (<code>de</code>) from <a href="http://beolingus.org">BeoLingus</a> and
+  <a href="http://leo.org">LEO.org</a></li>
+<li>Japanese (<code>ja</code>) fram <a href="japanesepod101.com">JapanesePod</a></li>
+<li>Spanish (<code>es</code>) from <a href="http://beolingus.org">BeoLingus</a></li>
+</ul>
+<p>There is the potential for</p>
+<ul>
+<li>Italian  (<code>it</code>) and</li>
+<li>Russian  (<code>ru</code>),</li>
+</ul>
+<p>but i think <a href="http://leo.org">LEO</a> is only offering a text dictionary
+for those two languages, not their own audio files.</p>
+<p>Google translate list over 60 languages for text translations. It
+seems unlikely that they offer text-to-speech services for more. The
+simplest way to see if GoogleTTS works for your target language is to
+send a request or two and see (hear) if you get a useful reply.</p>
+<p>Lastly, <a href="wiktionary.org">Wiktionary</a> is asked with any language
+code. The add-on may or may not find anything useful.</p>
+<p>More information in the <a href="Downloader%20sites.html">list of sites</a> used.</p>
 <h2>Private use</h2>
 <p>These audio files can be freely downloaded without registering or
 agreeing to a license, but they keep the copyright of those providing
-them. While i see no problem with using them privately, re-publishing,
-for example by uploading a shared deck to AnkiWeb, is most likely
-prohibited by those rights.</p>
-<h2>Ideas for improvements</h2>
-<p>While this add-on works as it is, a few things would be nice.</p>
+them. While i see no problem with using them privately, especially for
+educational purposes, re-publishing, for example by uploading a shared
+deck to AnkiWeb, is most likely prohibited by those rights.</p>
+<p>As exceptions is wiktionary. Those files are usually available under
+the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike
+License</a>. See the
+<a href="http://wikimediafoundation.org/wiki/Terms_of_use">Wikimedia Terms of Use</a>.</p>
+<blockquote class="nb">
+Do not publish decks with audio clips downloaded with this add-on
+without ensuring you have the rights to do so.
+</blockquote>
+
+<h2>No bulk download</h2>
+<p>This add-on does not do bulk downloads. That is, there is no way to
+let it go through the whole collection and download something for
+every card. There are a few reasons for this:</p>
 <ul>
+<li>It appears that the Google TTS service throttles the number of reply
+  it delivers when they requests are send too quickly. (At least the
+  <a href="https://ankiweb.net/shared/info/301952613">AwesomTTS add-on</a> has
+  code to work around this problem, needed or not.)</li>
+<li>As there may be many files downloaded for each word, i think  the
+  review of the downloaded material should not be skipped.</li>
+<li>This is especially true for Japanesepod, where you may want to
+  <a href="Downloader%20sites.html#blacklist">blacklist</a> some downloads.</li>
+<li>Contemplating the downloaded data when you get it note by note is
+  also potentially useful in remembering the words.</li>
+</ul>
+<h2>Improvements</h2>
+<p>Bugs and other issues can be reported at the
+<a href="https://github.com/ospalh/anki-addons/issues?state=open">github repository</a>
+(pull requests with patches welcome) or possibly at a
+<a href="http://no.such-domain.nope/NN">Google Groups thread</a> i may start soon.</p>
+<h3>Audio processing</h3>
+<p>The standard installation saves the files as they are received, which
+works well enough. Nothing more is needed.</p>
+<p>But the add-on contains code to do some simple audio processing,
+normalising the files and changing the output format. This code is not
+used by default, as it requires two extra Python packages,
+<a href="http://pydub.com/">PyDub</a> and
+<a href="http://pypi.python.org/pypi/pysox/0.3.6.alpha">pysox</a>. Pysox has
+still alpha status, and installing it isn’t always easy, either.
+Hackers that do manage that may then want to take a look at the
+content of the
+“<a href="https://github.com/ospalh/anki-addons/tree/master/downloadaudio/processors"><code>downloadaudio/processors</code></a>”
+directory.</p>
+<h3>More ideas</h3>
+<p>Things that might be added in the future (but don’t hold your breath):</p>
+<ul>
+<li>Switch off the menu items when not reviewing.</li>
 <li>Automatically edit the information before the request is sent. I use
-   what i call “electric” cards for Japanese verbs, where the
-   different forms are formed automatically. That means that the whole
-   word doesn’t actually appear on the card. While it is no big
-   problem to complete the word in the “Manual audio” dialog, the
-   add-on could automatically add the 「る」 for 一段動詞.</li>
+  what i call “electric” cards for Japanese verbs, where the different
+  forms are formed automatically. That means that the whole word
+  doesn’t actually appear in the note. While it is no big problem to
+  complete the word in the “Manual audio” dialog, the add-on could
+  automatically add the 「る」 for 一段動詞.  This will most likely
+  not by implemented any time soon.</li>
+<li>More talking dictionaries. Links welcome. Mention them in the
+  dedicated
+  <a href="https://groups.google.com/forum/?fromgroups=#!topic/ankisrs-users/yyixoEYy8tc">Google Groups thread</a>. Python
+  files welcome. Take a look at
+  <a href="https://github.com/ospalh/anki-addons/tree/master/downloadaudio/downloaders"><code>downloadaudio/downloaders</code></a>,
+  write a new class derived from <code>AudioDownloader</code> and send me a pull
+  request. Or just the <code>.py</code>-file.</li>
 </ul>
                 
 	</div>

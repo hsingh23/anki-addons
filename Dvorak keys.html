@@ -13,7 +13,7 @@
     <!-- Internet Explorer HTML5 enabling script: -->
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <style type="text/css">.clear {zoom: 1;display: block;}</style>
+    <style type="text/css"> .clear {zoom: 1;display: block;} figure img{display:block;} </style>
     <![endif]-->
   </head>
   <body>
@@ -23,13 +23,14 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/anki-addons/">Anki add-ons</a></li>
+            
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
             <li><a href="https://github.com/ospalh/anki-addons/blob/master/Dvorak%20keys.py" class="code">Add-on source</a></li>
 
-            <li><a href="http://beta.ankiweb.net/shared/info/2714331040" class="code">AnkiWeb download</a></li>
+            <li><a href="https://ankiweb.net/shared/info/2714331040" class="code">AnkiWeb download</a></li>
 
 
           </ul>
@@ -46,8 +47,8 @@
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/anki-addons/images/Dvorak_keys.png"
-		       alt="The keys to use." />
+		  <img src="/anki-addons/images/Dvorak_keys.png" alt="Colorcoded sketch of a keyboard and hands. The colors show which finger to use for which key. Some keys are marked as described in the text." />
+		  <figcaption>The keys to use.</figcaption>
 		</figure>
 
                 
@@ -56,19 +57,26 @@ href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard">Dvorak
 simplified keyboard</a> to answer a question.</p>
 <p>The point is to remember the key positions, rather than the characters
 the keys usually produce.</p>
-<p>There are two sets of keys to use, with the four typing fingers of the
+<p>There are three sets of keys to use, with the four typing fingers of the
 left hand in the row above the home row, going from “again” with the
-<span class="qtbase" id="pinky">little finger</span>, through “hard”
+<span class="qtbase pinky">little finger</span>, through “hard”
 with the ring finger, “good” for the middle finger to “easy” for the
 index finger.</p>
 <p>The second set is in the home position. Left index finger for “again”
 and three fingers of the right hand: index finger for “hard”, middle
 finger for “good” and ring finger for “easy”.</p>
+<p>The third set is similar to the first set, but in the bottom row,
+here, too, going from <span class="qtbase pinky">little finger</span>,
+“again”, to the index finger, “easy”. (Some (German? international?)
+keyborads have a small left shift key and an extra key for “&lt;” and
+“&gt;”. That key is skipped.)</p>
 <p>These keys were selected so that they don't clash with other functions
 like add card or edit card.</p>
-<h3>Configuration</h3>
+<h2>Configuration</h2>
 <p>The keys that are used are defined in a Python dictionary. Read the
-comments in the source file for details.</p>
+comments in the
+<a href="https://github.com/ospalh/anki-addons/blob/master/Dvorak%20keys.py">source file</a>
+for details.</p>
 <p>I tried to find good keys to use for QWERTY keyboards, but
 couldn't. My best idea was to use the four keys for the index fingers,
 in the home positions or reaching towards each other. These are there

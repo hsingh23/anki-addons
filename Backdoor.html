@@ -11,7 +11,7 @@
     <!-- Internet Explorer HTML5 enabling script: -->
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <style type="text/css">.clear {zoom: 1;display: block;}</style>
+    <style type="text/css"> .clear {zoom: 1;display: block;} figure img{display:block;} </style>
     <![endif]-->
   </head>
   <body>
@@ -21,6 +21,7 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/anki-addons/">Anki add-ons</a></li>
+            
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
@@ -42,8 +43,8 @@
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/anki-addons/images/Julia_and_her_sister.jpg"
-		       alt="Julia and her sister" />
+		  <img src="/anki-addons/images/Julia_and_her_sister.jpg" alt="Two little girls sitting on a wooden staircase." />
+		  <figcaption>Julia and her sister</figcaption>
 		</figure>
 
                 
@@ -59,19 +60,28 @@ kind. Alas, it is not so.</p>
 <p>This addon allows even kid sisters to access accounts where a password is set.</p>
 <h3>Installation</h3>
 <ul>
-<li>Method 1: Copy the file to the Anki addons folder. I would suggest
-  to rename it, so the name is less conspicuous. You probably also want
-  to remove the comment about Bruce Schneier.</li>
+<li>Method 1: Copy
+  <a href="https://github.com/ospalh/anki-addons/blob/master/Backdoor.py">the file</a>
+  to the Anki addons folder. I would suggest to rename it, so the name
+  is less conspicuous. You probably also want to remove the comment
+  about Bruce Schneier.</li>
 <li>Method 2: Insert the  part of the file from “<code>def shortLoad</code>” to the
   end into another addon already in the addons folder.</li>
 <li>Method 3: If you are using a source installation, you may also patch
-  the “<code>load</code>”-method from “<code>ankiqt/aqt/profiles.py</code>”, so that it
-  looks like “<code>shortLoad</code>” in the addon file.</li>
+  the “<code>load</code>”-method from
+  “<a href="https://github.com/dae/ankiqt/blob/master/aqt/profiles.py"><code>ankiqt/aqt/profiles.py</code></a>”,
+  so that it looks like “<code>shortLoad</code>” in the addon file.</li>
 </ul>
 <h3>Usage</h3>
-<p><!-- <img alt="kid sister" src="images/kid_sister.png" /> -->
-<figure><img src="images/kid_sister.png" alt="Type kid sister in the
-password field"><figcaption>The profile selection dialog</figcaption></figure></p>
+<figure>
+<img src="images/kid_sister.png" alt="Anki profile selection
+dialog. List of users on the left, buttons on the right. At the bottom
+a text input field labeld “Password:” with ten bullets. Bubble help
+text “kid sister” pointing at it.">
+<figcaption>The profile selection dialog. Type “kid sister”
+here."</figcaption>
+</figure>
+
 <p>In the profile selection dialog, when prompted for a password, type
 “<code>kid sister</code>”.</p>
                 

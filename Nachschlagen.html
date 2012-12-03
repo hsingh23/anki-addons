@@ -11,7 +11,7 @@
     <!-- Internet Explorer HTML5 enabling script: -->
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <style type="text/css">.clear {zoom: 1;display: block;}</style>
+    <style type="text/css"> .clear {zoom: 1;display: block;} figure img{display:block;} </style>
     <![endif]-->
   </head>
   <body>
@@ -21,13 +21,14 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/anki-addons/">Anki add-ons</a></li>
+            
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
             <li><a href="https://github.com/ospalh/anki-addons/blob/master/Nachschlagen.py" class="code">Add-on source</a></li>
 
-            <li><a href="http://beta.ankiweb.net/shared/info/1211332804" class="code">AnkiWeb download</a></li>
+            <li><a href="https://ankiweb.net/shared/info/1211332804" class="code">AnkiWeb download</a></li>
 
 
           </ul>
@@ -44,8 +45,8 @@
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/anki-addons/images/nachschlagen.png"
-		       alt="A menu called Nachschlagen under the Tools menu" />
+		  <img src="/anki-addons/images/nachschlagen.png" alt="A menu called Nachschlagen under the Tools menu. Menu items: Japanisch bei Wadoku, Deutsch bei Wadoku, Auswahl bei Wadoku, Kanji bei Kanji-Lexikon, Kanjiauswahl bei Kanji-Lexikon, Ausdruck bei Forvo, Auswahl bei Forvo" />
+		  <figcaption>The new menu</figcaption>
 		</figure>
 
                 
@@ -55,13 +56,15 @@ favorite resources.</p>
 <p>A few of them are German, and the whole add-on is kept in German as
 well. „Nachschlagen“ is German for “Lookup”.</p>
 <h2>Set-up</h2>
-<p>There is a configuration section at the head of the source file where
-a few things can be configured. Most of it is not too important and
-explained in the file itself. You may encounter the error message “No
-field found for lookup. Consider changing the field name lists in the
-plugin source.” That means that my guesses about what you use as
-field names were wrong. In this case you should add your favorite
-field names to the <code>expression_fields</code> and <code>meaning_fields</code> lists.</p>
+<p>There is a configuration section at the head of the
+<a href="https://github.com/ospalh/anki-addons/blob/master/Nachschlagen.py">source file</a>
+where a few things can be configured. Most of it is not too
+important and explained in the file itself. You may encounter the
+error message “No field found for lookup. Consider changing the field
+name lists in the plugin source.” That means that my guesses about
+what you use as field names were wrong. In this case you should add
+your favorite field names to the <code>expression_fields</code> and
+<code>meaning_fields</code> lists.</p>
 <h2>For learners of any spoken language</h2>
 <p>The “Forvo” links are useful for learners of any spoken language. Look
 up pronunciations at the crowd-sourced <a href="http://forvo.com">forvo.com</a>.</p>

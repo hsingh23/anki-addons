@@ -11,7 +11,7 @@
     <!-- Internet Explorer HTML5 enabling script: -->
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <style type="text/css">.clear {zoom: 1;display: block;}</style>
+    <style type="text/css"> .clear {zoom: 1;display: block;} figure img{display:block;} </style>
     <![endif]-->
   </head>
   <body>
@@ -21,6 +21,7 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/anki-addons/">Anki add-ons</a></li>
+            
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
@@ -42,8 +43,8 @@
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/anki-addons/images/stroke%20color.png"
-		       alt="Colored stroke order diagram for 休" />
+		  <img src="/anki-addons/images/stroke%20color.png" alt="The word ausruhen: and a colored stroke order diagram for 休" />
+		  <figcaption>Write 休 in this order.</figcaption>
 		</figure>
 
                 
@@ -51,24 +52,24 @@
 to put stroke order diagram svgs in
 <code>Anki/addons/kanji-colorize-indexed</code>. Then they are shown when you use
 the template <code>{{kanjiColor:NN}}</code>.</p>
-<h3>Alternative</h3>
+<h2>Alternative</h2>
 <p>This add-on serves a similar purpose as
 <a href="http://cayennes.github.com">cayennes</a>’
  <a href="https://github.com/cayennes/kanji-colorize/tree/master/anki">add-on</a>
  part of the kanji-colorize project.</p>
-<h4>Pros</h4>
+<h3>Pros</h3>
 <ul>
 <li>Does not need another field in the model</li>
 <li>Keeps the collection.media folder clean.</li>
 <li>Somewhat simple to exchange the whole set with another color
   scheme. Just bend one link to another directory.</li>
 </ul>
-<h4>Cons</h4>
+<h3>Cons</h3>
 <ul>
 <li>The core function, color, is not working on AnkiWeb/AnkiDroid</li>
 <li>The set-up of Cayennes' add-on may be easier on the add-on side.</li>
 </ul>
-<h4>Without the add-on</h4>
+<h3>Without the add-on</h3>
 <p>When a construction like <code>&lt;div
 class="strokes"&gt;{{kanjiColor:Kanji}}&lt;/div&gt;</code> is used on the cards and
 something like
@@ -79,14 +80,14 @@ font-family:KanjiStrokeOrders;
 in the style, it isn’t too bad on AnkiWeb or mobile devices: The kanji
 will be shown with the kanji stroke order font, which uses the same
 data base.</p>
-<h4>Ospalh-special</h4>
+<h3>Ospalh-special</h3>
 <p>Daring spirits can use my
 <a href="https://github.com/ospalh/Anki-Android/tree/stroke-color-addon">variant</a>
 of <a href="https://github.com/nicolas-raoul/Anki-Android">AnkiDroid</a>. I have
 added the equivalent of this addon, giving colored stoke order
 diagrams on AnkiDroid. You should merge this branch into the newest
 version of AnkiDroid, not just use that branch as-is.</p>
-<h3>Diagrams</h3>
+<h2>Diagrams</h2>
 <p>The diagrams can be produced with either Cayennes'
 <a href="https://github.com/cayennes/kanji-colorize/">kanji-colorize</a> script
 or with <a href="https://github.com/ospalh/kanji-colorize">my fork</a> of it.</p>
