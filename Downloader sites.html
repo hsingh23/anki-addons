@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ospalh’s Anki2 addons – Audio downloader sites</title>
+    <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
+    <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
+    <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
+    
+    <link rel="stylesheet" type="text/css" href="/anki-addons/css/jquery.qtip.min.css">
+    
+    <script src="/anki-addons/scripts/less-1.3.0.min.js" type="text/javascript"></script>
+    <!-- Internet Explorer HTML5 enabling script: -->
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <style type="text/css"> .clear {zoom: 1;display: block;} figure img{display:block;} </style>
+    <![endif]-->
+  </head>
+  <body>
+    <section id="page">
+      <header>
+        <nav class="clear">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/anki-addons/">Anki add-ons</a></li>
+            
+  <li><a href="/anki-addons/Download audio.html">Download audio</a></li>
+
+            <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
+            
+
+            <li><a href="https://ankiweb.net/shared/info/3100585138" class="code">AnkiWeb download</a></li>
+
+
+
+          </ul>
+        </nav>
+      
+    <h1>Audio downloader sites</h1>
+    
+    <h3>Details on Download audio</h3>
+    
+
+      </header>
+      
+<article id="sites" class="clear">
+	<div class="articleBody">
+                
+                <p>These sites are tried to rerieve audio clips:</p>
+<h2>Beolingus</h2>
+<p><a href="http://dict.tu-chemnitz.de/doc/about.en.html">Beolingus</a> is an online
+dictionary provided by the
+<a href="http://www.tu-chemnitz.de/en/"><span class="qtbase tu">TU</span> Chemnitz</a>.</p>
+<p>The site provides German↔English, German↔Portuguese and German↔Spanish
+dictionaries and pronuctiations in English, German and Spanish.</p>
+<h2><span id='gtts'>Google TTS</span></h2>
+<p>Goole TTS is the text-to-speech part of
+<a href="http://translate.google.com/#auto/en/">Google Translate</a>.  It is the
+only text-to-speech services among the downloaders. The advantage is
+that this will almost always get you an audio version of the text
+enterend – when Google TTS works for your language at all – and can be
+used to get an audio version of whole sentences, not just single
+words.</p>
+<p>The disadvantage is that that this will almost always get you an audio
+version of the text enterend, even when it is misspelled.</p>
+<p>Another disadvantage is that it is a robot voice. It may hide
+idiosyncrasies of the phrase or word.</p>
+<h2><span id="jpod">Japanesepod</span></h2>
+<p>Downloads audio provided by
+<a href="http://www.japanesepod101.com/">JapanesePod101</a>.  This is the same
+data source as
+<a href="http://www.csse.monash.edu.au/~jwb/cgi-bin/wwwjdic.cgi?1C">Jim Breen's WWWJDIC</a>
+uses for its Japanese audio. WWWJDIC
+is the dictionary called “edict” by the
+<a href="https://ankiweb.net/shared/info/3918629684">Japanese Support add-on</a>.</p>
+<p>This was the main motivation for writing this add-on. By providing a
+way to download these pronunciations this add-on is a replacement for
+the Anki-1 plugins “Audio Download” and “Audio Download (Extension)”,
+as mentioned on
+<a href="https://groups.google.com/forum/#!searchin/ankisrs/breen/ankisrs/UHGEpSkWf9k/3bFJ71AimCEJ">Google Groups</a>.</p>
+<h3><span id="blacklist">Blacklist</span></h3>
+<p>The download mechanism at Japanesepod can’t really say
+<a href="nopagehere.html">“no”</a> in the usual way. Instead it sends you an
+audio clip that tells you “The audio for this clip is currently not
+available. It will be recorded and uploaded shortly. Thank you for
+your patience.”. While that is a nice gesture, after hearing that
+message two or three times the voice starts sounding a bit like <span
+class="qtbase sonya">Sonya</span>.</p>
+<figure>
+<img src="images/blacklist.png"
+alt="Review dialog with a skull-and-bones button">
+<figcaption>Use the skull-and-bones button to blacklist a file.</figcaption>
+</figure>
+
+<p>To deal with this phenomenon, this add-on provides another button in
+the download review dialog, called “blacklist”. Click this for each
+file where you get the “... currently not
+available...” spiel. The add-on will then store a
+<a href="http://en.wikipedia.org/wiki/Cryptographic_hash_function">hash</a> for
+this file. When the same file is seen again, it is quietly dropped and
+you may receive a “Nothing downloaded” message.</p>
+<h2>Leo</h2>
+<p>These audio files come from
+<a href="http://www.leo.org/index_en.html">LEO GmbH</a>, originaly founded by the
+<a href="http://www.in.tum.de/en.html">Department of Informatics</a> of the
+<a href="http://www.tum.de/en/homepage/"><span class="qtbase tu">TU</span> München</a>.
+They offer “five (<a href="http://www.leo.org/index_en.html">sic</a>)
+dictionaries”, German↔Chinese, German↔English, German↔French,
+German↔Italian, German↔Russian and German↔Spanish. Of these seven
+languages, they have audio files for Chinese, English, French, German
+and Spanish. I could not find words for Italian and Russian, but they
+may be added at some point.</p>
+<h3>Chinese</h3>
+<p>The Chinese pronunciations use a version of pinyin with tone
+numbers. Learners of Chinese should install the
+<a href="https://ankiweb.net/shared/info/3448800906">Chinese support</a>
+add-on. That add-on brings along the <a href="http://cjklib.org/">cjklib</a>,
+which is then used to transforms pinyin with accents into the right
+form with numbers.</p>
+<h2>Macmillan</h2>
+<p>This downloader gets  pronunciations from the
+<a href="http://www.macmillandictionary.com/">Macmillan Dictionary</a> site.</p>
+<p>Apart from the pronunciation, for some words that name sounds or
+noises, the dictionary offers “sound effects”, that are also
+downloaded. Try downloading
+“<a href="http://en.wikipedia.org/wiki/House_music">house</a>” or “thunder”. The
+sound effects should be marked in the bubble help text in the review.</p>
+<p>Macmillan Dictionary is available in a British English and an American
+Engilsh version. To counterbalance the American English of
+Merriam-Webster, the standard install of the add-on uses the British
+version. See <a href="#sitesonoff">below</a> how to turn on the American English
+version instead.</p>
+<h2>Merriam-Webster</h2>
+<p>American English pronunciations from the
+<a href="http://www.merriam-webster.com/info/index.htm">Merriam-Webster</a>
+online dictionary.</p>
+<h2>Wiktionary</h2>
+<p><a href="http://www.wiktionary.org">Wiktionary</a> is the dictionary branch of Wikipedia.</p>
+<p>The add-on tries to download words for every language. Where you get
+any results is hard to say.</p>
+<p>As these sound files are all uploaded by users, it is possible (even
+if unlikely) that some files do not contain what the should. They
+<em>might</em> even contain obsecnities. The
+<a href="http://en.wikipedia.org/wiki/Wikipedia:Content_disclaimer">Content disclaimer</a>
+from Wikipedia applies. If you encounter an incorrect file, the best
+way to proceed is to clean up the wiktionary page in
+question.</p>
+<p>The different language versions of Wiktionary add audio clips in
+different ways to their word pages. When the add-on did not download a
+pronunciation that is present on a specifc Wiktionary page, please
+<a href="https://github.com/ospalh/anki-addons/issues?state=open">report this</a>. I
+will then try to find a way to extract that word, so that it should be
+downloaded with an updated version of the add-on.</p>
+<h2><span id="sitesonoff">Using different sites</span></h2>
+<p>The add-on loads the different downloaders through the list
+“<code>downloaders</code>” in the file “<a
+href="https://github.com/ospalh/anki-addons/blob/master/downloadaudio/downloaders/__init__.py">
+<code>downloadaudio/downloaders/__init__.py</code></a>”. To get to the file, use
+the “Tools/Add-ons/Open Add-ons Folder...”  menu item, then open the
+folder “<code>downloadaudio</code>” and in there “<code>downloaders</code>”.</p>
+<p>The downloaders are tried in the order they appear there. To change
+this order or to switch on or off downloaders, rearrange the list
+entries, or add or remove “<code>#</code>” characters before the name. Lines
+starting with a “<code>#</code>” are comments in Python. Those lines are not
+used, nothing will be downloaded from these sites.</p>
+<p>For example, to change the Macmillan downloads from British English to
+American English, add a “<code>#</code>” character to the line
+“<code>MacmillanBritishDownloader(),</code>” and remove it from the line “<code>#
+MacmillanAmericanDownloader(),</code>”. (Do not remove the comma or
+parantheses. Do not make other changes unless you know what you are
+doing.)</p>
+<p>After you have made changes to the file and saved it, you need to
+restart Anki for the changes to take effect.</p>
+                
+	</div>
+
+</article>
+
+      <footer>
+        <div class="line"></div>
+        <span class="by"><a href="https://github.com/ospalh">ospalh</a>
+        maintains <a href="https://github.com/ospalh/anki-addons">anki-addons</a></span>
+        <a href="http://tutorialzine.com/" class="tmpl">Original
+        template: Tutorialzine</a>
+      </footer>
+    </section>
+  
+    <script src="/anki-addons/scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="/anki-addons/scripts/jquery.qtip.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/anki-addons/scripts/audio_tips.js"></script>
+  
+</body>
+</html>

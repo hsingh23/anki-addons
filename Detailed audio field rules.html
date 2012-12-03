@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ospalh’s Anki2 addons – Detailed audio field rules</title>
+    <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
+    <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
+    <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
+    
+    <link rel="stylesheet" type="text/css" href="/anki-addons/css/jquery.qtip.min.css">
+    
+    <script src="/anki-addons/scripts/less-1.3.0.min.js" type="text/javascript"></script>
+    <!-- Internet Explorer HTML5 enabling script: -->
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <style type="text/css"> .clear {zoom: 1;display: block;} figure img{display:block;} </style>
+    <![endif]-->
+  </head>
+  <body>
+    <section id="page">
+      <header>
+        <nav class="clear">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/anki-addons/">Anki add-ons</a></li>
+            
+  <li><a href="/anki-addons/Download audio.html">Download audio</a></li>
+
+            <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
+            
+
+            <li><a href="https://ankiweb.net/shared/info/3100585138" class="code">AnkiWeb download</a></li>
+
+
+            <li><a href="https://github.com/ospalh/anki-addons/blob/master/downloadaudio/get_fields.py" class="code">Source file</a></li>
+
+
+          </ul>
+        </nav>
+      
+    <h1>Detailed audio field rules</h1>
+    
+    <h3>Details on Download audio</h3>
+    
+
+      </header>
+      
+<article id="fieldrules" class="clear">
+	<div class="articleBody">
+                
+                <p>In most cases – including learning Japanese or Chinese with the
+<a href="https://ankiweb.net/shared/info/3918629684">standard</a>
+<a href="https://ankiweb.net/shared/info/3448800906">add-ons</a> installed –
+<a href="Add%20audio%20field.html">adding a field</a> “Audio” to the note and to at
+least <a href="Add%20audio%20to%20cards.html">one side of a card</a> is enough, but more
+sophisticated use of the add-on is also possible.</p>
+<p>This page describes how the add-on matches audio and text fields and
+gives examples on how to use more than one pronunciation per note.</p>
+<h2>Fields rules</h2>
+<p>The download mechanism uses these rules to match audio fields to text
+fields:</p>
+<p>For most downloaders, plain text is used. The rules to find the source
+fields are:</p>
+<ul>
+<li>When there is a field called
+  <ul>
+    <li>“Audio” or</li>
+    <li>“Sound”,</li>
+  </ul>
+  the add-on looks for a field called
+  <ul>
+    <li>“Expression” or</li>
+    <li>“Word”</li>
+  </ul></li>
+<li>When there is an “Audio” or “Sound” field, but no “Expression” or
+  “Word” field, the first field is used as the source.</li>
+<li>For fields where “Audio” or “Sound” is a substring, this word is
+  removed and the rest used to look for a field. For example, to get
+  pronunciations for a field called “Example”, you should add a field
+  named “Example Audio” (or “Audio Example”). When downloading, the
+  add-on will find the field “Example Audio”, strip the “Audio”, clean
+  up the space to get “Example” and look for that field to get the
+  text.</li>
+</ul>
+<p>To get Japanese pronunciations from
+<a href="http://japanesepod101.com">JapanesePod101.com</a> or Chinese
+pronunciations from <a href="http://leo.org">LEO.org</a> there has to be the
+reading stored in the note. The detailed rules are:</p>
+<ul>
+<li>When there is a field called
+  <ul>
+    <li>“Audio” or</li>
+    <li>“Sound”,</li>
+  </ul>
+  the add-on looks for a field called
+  <ul>
+    <li>“Reading”,</li>
+    <li>“Kana”,</li>
+    <li>「かな」,</li>
+    <li>「仮名”」,</li>
+    <li>“<span class="qtbase hanzipinyin">Hanzi</span>” or</li>
+    <li>“Pinyin”.</li>
+  </ul></li>
+<li>The substring rule is different for this case. For fields where
+  “Audio” or “Sound” is a substring, this word is not removed, but
+  the add-on looks for fields where that word has been
+  <em>replaced</em> with  one from the “Reading” list. For example, when
+  there is a field called “Japanese Reading”, add a field “Japanese
+  Audio” to download from the reading field.</li>
+<li>There is no first field rule for readings.</li>
+</ul>
+<p>All of these field names are not case sensitive. For example, “expression”,
+“auDIO” or “SOUND” will work.</p>
+<p>The field names are defined in the lists in the file
+“<a href="https://github.com/ospalh/anki-addons/blob/master/downloadaudio/get_fields.py"><code>downloadaudio/get_fields.py</code></a>”
+in the add-ons folder. That folder can be displayed through the
+“Tools/Add-ons/Open Add-ons Folder...” menu item, and names can be
+added to the lists.</p>
+<h2>Examples</h2>
+<p>I use complex note types with many fields in my personal
+collection. Field lists from these models can be used to demonstrate
+real-life use of these rules.</p>
+<h3>Model “Standard — Japanese”</h3>
+<p>My main Japanese vocabulary model has <span class="qtbase
+morefields">these fields</span>:</p>
+<ul>
+<li>Expression</li>
+<li>Reading</li>
+<li>Deutsch</li>
+<li>Zusatz</li>
+<li>Audio</li>
+<li>例文</li>
+<li>例文 Audio</li>
+</ul>
+<p>Applying the rules means that:</p>
+<ul>
+<li>The plain rule matches the field  “Expression” to the field
+  “Audio”. The GoogleTTS downloader will work from the expression and
+  download into the audio field.</li>
+<li>The readings rule matches the field  “Reading” to the field
+  “Audio”. The Japanesepod downloader will work from the reading and
+  download into the audio field, too.</li>
+<li>The plain substring rule matches the field “”例文” to the field
+  “例文 Audio”</li>
+<li>For the fields “Deutsch” and “Zusatz” (and the audio fields
+  themselves), nothing is downloaded.</li>
+</ul>
+<h3>Model “Land, state etc.”</h3>
+<p>For my world-wide geography deck, i use  <span class="qtbase
+morefields">the fields</span>:</p>
+<ul>
+<li>CountryName</li>
+<li>CountryName_Audio</li>
+<li>Capital</li>
+<li>CapitalName_Audio</li>
+<li>Map</li>
+<li>Flag</li>
+<li>Inhabitants_Scalar</li>
+<li>Area_Scalar</li>
+<li>NameAlternative</li>
+<li>NameAlternative_Audio</li>
+<li>CapitalAlternative</li>
+<li>CapitalAlternative_Audio</li>
+</ul>
+<p>Here only the plain substring rule matches. The add-on tries to get
+audio for these field pairs:</p>
+<ul>
+<li>CountryName → CountryName_Audio</li>
+<li>Capital → Capital_Audio</li>
+<li>NameAlternative → NameAlternative_Audio</li>
+<li>CapitalAlternative → CapitalAlternative_Audio</li>
+</ul>
+<h3>Model “都道府県 – Japanese”</h3>
+<p>Here some of the  fields are:</p>
+<ul>
+<li>Präfektur_ローマ字</li>
+<li>都道府県</li>
+<li>都道府県_Reading</li>
+<li>都道府県_Audio</li>
+<li>Nummer</li>
+<li>Einwohner</li>
+<li>Fläche</li>
+<li>Karte</li>
+</ul>
+<p>Here the plain substring and the reading substring rules match:</p>
+<ul>
+<li>The plain substring rule matches the field  “都道府県” to the field
+  “都道府県_Audio”.</li>
+<li>The readings substring rule matches the field  “都道府県_Reading” to the field
+  “都道府県_Audio”.</li>
+</ul>
+<p>Here, too, pronunciations from different source texts are downloaded
+to the same field</p>
+                
+	</div>
+
+</article>
+
+      <footer>
+        <div class="line"></div>
+        <span class="by"><a href="https://github.com/ospalh">ospalh</a>
+        maintains <a href="https://github.com/ospalh/anki-addons">anki-addons</a></span>
+        <a href="http://tutorialzine.com/" class="tmpl">Original
+        template: Tutorialzine</a>
+      </footer>
+    </section>
+  
+    <script src="/anki-addons/scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="/anki-addons/scripts/jquery.qtip.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/anki-addons/scripts/audio_tips.js"></script>
+  
+</body>
+</html>

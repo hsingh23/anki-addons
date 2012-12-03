@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ospalh’s Anki2 addons – Add audio field</title>
+    <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
+    <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
+    <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
+    
+    <link rel="stylesheet" type="text/css" href="/anki-addons/css/jquery.qtip.min.css">
+    
+    <script src="/anki-addons/scripts/less-1.3.0.min.js" type="text/javascript"></script>
+    <!-- Internet Explorer HTML5 enabling script: -->
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <style type="text/css"> .clear {zoom: 1;display: block;} figure img{display:block;} </style>
+    <![endif]-->
+  </head>
+  <body>
+    <section id="page">
+      <header>
+        <nav class="clear">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/anki-addons/">Anki add-ons</a></li>
+            
+  <li><a href="/anki-addons/Download audio.html">Download audio</a></li>
+
+            <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
+            
+
+            <li><a href="https://ankiweb.net/shared/info/3100585138" class="code">AnkiWeb download</a></li>
+
+
+
+          </ul>
+        </nav>
+      
+    <h1>Add audio field</h1>
+    
+    <h3>Details on Download audio</h3>
+    
+
+      </header>
+      
+<article id="addaudio" class="clear">
+	<div class="articleBody">
+                
+                <p>The add-on requires a field called “Audio”, or that contains the word
+“Audio”, to put the downloaded data.</p>
+<p>While adding or renaming fields in Anki isn’t too hard, a short guide
+might be helpful.</p>
+<h2><span id="one_try">Step one: Try</span></h2>
+<figure>
+<img src="images/manual_audio.png" alt="Anki with a card shown and the
+mouse pointing to the menu item
+Edit/Media/Manual audio. ">
+<figcaption>When reviewing, activate the
+Edit/Media/Manual audio menu.</figcaption>
+</figure>
+
+<p>When you downloaded a shared deck that already has some audio data,
+it may work without any change. Start reviewiing the new deck. On the
+first card, try the menu item
+“Edit/Media/Manual audio”.</p>
+<p><span class="clear" />
+<figure>
+<img src="images/preview_audio.png" alt="Dialog window with text
+starting Requests to send to the download sites">
+<figcaption>When you get this, dialog, the add-on will go fetch.</figcaption>
+</figure>
+When a dialog with
+“Requests to send to the download sites”, and with the right words in
+the edit boxes below appears, you are in luck and your
+model already works with this add-on.</p>
+<p><span class="clear" />
+<figure>
+<img src="images/nothing_to_download.png" alt="Anki with a card shown
+and a message reading nothing to download">
+<figcaption>When you get this, you need to add an audio field.</figcaption>
+</figure></p>
+<h2>Before you go on</h2>
+<p>Adding fields or changing field names requires a full upload of the
+collection. Make sure you sync before you do this.</p>
+<blockquote class="nb">When you learn with mobile devices or with
+AnkiWeb, sync on these remote clients first. Then sync your desktop
+client. Only then start checking the field list.</blockquote>
+
+<h2>Checking the field list</h2>
+<p>When the download test didn’t work, you should click on the  “Edit”
+button in the bottom left.</p>
+<figure style="width: 333px;">
+<img src="images/front_back.png" alt="Edit current window with fields
+Front and Back. ">
+<img src="images/id_franz_de.png" alt="Edit current window with fields
+Französisch, Deutsch ...">
+<figcaption>Candidates for downloading are the first field or the
+field named „Französisch“.</figcaption>
+</figure>
+
+<p>Take a look at the field list and decide for which field or
+fields you would like to download data.</p>
+<p>Then click on the “Fields...” button.</p>
+<h2>Adding an audio field</h2>
+<p>In the “Fields for NN” dialog, click on “Add”</p>
+<p><span class="clear" /></p>
+<h3>Add for the first field</h3>
+<figure>
+<img src="images/add_for_base.png" alt="Dialog with text Field name:
+and input text Audio.">
+<figcaption>Here we want to download for the first field</figcaption>
+</figure>
+
+<p>When you want to download for the first field, just type “Audio” for
+the new field name. Then click  “OK”.</p>
+<p><span class="clear" /></p>
+<h3><span id="otherfield">Add for <span class="qtbase orfirst">other</span> field</span></h3>
+<figure>
+<img src="images/add_not_first.png" alt="Anki review window with a
+picture of a bird in the first field and the word l'oiseau in the
+second field. That word and the field name Back are marked. To the
+right a dialog with the field names. The word Back is marked. Below a
+dialog. Text: Field name. Text input: Back Audio. The
+word Back is marked.">
+<figcaption>Look for what you want to download, then use that field’s
+name in the new field.</figcaption>
+</figure>
+
+<p>Alternatively, when the field you want to download for is not the
+first field, just should use that field’s name, followed by
+“Audio”. Then click  “OK” here, too.</p>
+<p>In the example, sending pictures of birds to GoogleTTS would not
+work. So we look for interesting text in the “Edit Current”
+window: «&nbsp;l'oiseau&nbsp;», marked in red with a “1” in the image. That text
+is in the field named “Back” (blue 2). That field name appears
+again in the “Fields for NN” dialog. (blue 3). Use this field name
+together with the word “Audio” as the new field name. In this case,
+use “Back Audio”. (blue 4)</p>
+<p><span class="clear" /></p>
+<h3><span id="thewarning">The warning</span></h3>
+<figure>
+<img src="images/sync_warning.png" alt="Dialog with text The requested
+change will require a full upload of the database when you next
+synchronize your collection. If you have reviews or other changes
+waiting on another device that haven't been synchronized here yet,
+they will be lost. Continue?">
+<figcaption>Read and decide.</figcaption>
+</figure>
+
+<p>At this point, a warning dialog may appear. If you are not sure about
+this, click “No”, sync changes from remote devices to this
+collecection and do the steps above again. If you are sure, click
+“Yes”.</p>
+<h3>More fields</h3>
+<p>You can add more than one audio field to download from more than one
+source field by repeating the <a href="#otherfield">Add for other field</a>
+step.</p>
+<p><span class="clear" /></p>
+<h2><span id="renamefields">Rename fields</span></h2>
+<figure>
+<img src="images/00906.png" alt="Anki review window. Text: Übersetzen
+Ja, mein Herr. Oui monsieur. 00906. Below, a dialog window. Text:
+Requests send to the download sites ID 00906">
+<figcaption>No Sir. I do not want to learn to pronounce “00906”.</figcaption>
+</figure>
+
+<p>When the <a href="#one_try">test above</a> tried to download from a wrong field,
+you have to rename the audio field. Doing this is similar to <a href="#otherfield">adding
+an audio field</a>.</p>
+<figure>
+<img src="images/change_name.png" alt="On the left: Window with a list
+of fields with their content, ID:00906, Französisch:Oui,
+monsieur, Deutsch: Ja, mein Herr and
+Audio:sound:00906.mp3. Französisch is marked in blue, Oui,
+monsieur in red and Audio in yellow. To the
+right a dialog with the field names. Französisch is marked in blue,
+Audio is selected and marked in yellow. Below a
+dialog. Text: New name. Text input: Französisch Audio. Französisch is
+marked in blue, Audio in yellow.">
+<figcaption>Change the name of the field “Audio”. Add the name of the
+source field to the name.</figcaption>
+</figure>
+
+<ul>
+<li>Start reviewing.</li>
+<li>From the main window, click the “Edit” button in the bottom left.</li>
+<li>Look at the field list:
+  <ul>
+    <li>There should be a field named “Audio” or “Sound”. (yellow in
+  the image)</li>
+    <li>Identify the interesting text (« Oui monsieur. », red). Note the
+  field name („Französisch“, blue)</li>
+  </ul></li>
+<li>Click the “Fields...” button</li>
+<li>The two field names, („Französisch“ and “Audio”), appear in the list
+  and are marked in blue and yellow.</li>
+<li>Click on “Audio” to select the field.</li>
+<li>Then click the “Rename” button.</li>
+<li>As the new name, add the other field’s name to the old
+  name. (“Französisch Audio”  or “Audio Französisch”, either will work.)</li>
+<li>Click “OK”. <a href="#thewarning">The warning</a> may pop up.</li>
+</ul>
+<h2>Go back</h2>
+<p>When you are finished with setting up the fields, simply click
+“Close” in the “Fields for NN” dialog  and “Close” again in the “Edit
+Current” dialog.</p>
+                
+	</div>
+
+</article>
+
+      <footer>
+        <div class="line"></div>
+        <span class="by"><a href="https://github.com/ospalh">ospalh</a>
+        maintains <a href="https://github.com/ospalh/anki-addons">anki-addons</a></span>
+        <a href="http://tutorialzine.com/" class="tmpl">Original
+        template: Tutorialzine</a>
+      </footer>
+    </section>
+  
+    <script src="/anki-addons/scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="/anki-addons/scripts/jquery.qtip.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/anki-addons/scripts/audio_tips.js"></script>
+  
+</body>
+</html>

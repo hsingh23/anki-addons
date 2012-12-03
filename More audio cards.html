@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ospalh’s Anki2 addons – More audio cards</title>
+    <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
+    <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
+    <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
+    
+    <script src="/anki-addons/scripts/less-1.3.0.min.js" type="text/javascript"></script>
+    <!-- Internet Explorer HTML5 enabling script: -->
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <style type="text/css"> .clear {zoom: 1;display: block;} figure img{display:block;} </style>
+    <![endif]-->
+  </head>
+  <body>
+    <section id="page">
+      <header>
+        <nav class="clear">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/anki-addons/">Anki add-ons</a></li>
+            
+  <li><a href="/anki-addons/Download audio.html">Download audio</a></li>
+
+            <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
+            
+
+            <li><a href="https://ankiweb.net/shared/info/3100585138" class="code">AnkiWeb download</a></li>
+
+
+
+          </ul>
+        </nav>
+      
+    <h1>More audio cards</h1>
+    
+    <h3>Details on Download audio</h3>
+    
+
+      </header>
+      
+<article id="morecards" class="clear">
+	<div class="articleBody">
+                
+                <p>One way to use the downloaded audio is to create a special card for
+hearing comprehension.</p>
+<h2>Template editor</h2>
+<figure>
+<img src="images/card_types.png" alt="Window with tabs reading Forward
+Reverse Example at the top. The left of the main area is split in
+three parts, Front template, Styling and Back template. The right is
+split in two: Front preview and Back preview.">
+<figcaption>The card template editor for a moderately complex note type.</figcaption>
+</figure>
+
+<p>To get the template editor, start reviewing. Then click the “Edit”
+button at the bottom left. In the “Edit Current” window click “Cards...”</p>
+<p><span class="clear" /></p>
+<h3>Adding a hearing comprehension card</h3>
+<p>Click on the “+” button at the top right. A new tab appears at the top
+called “Card n” (“Card 2”, ...)</p>
+<p>Click on that tab. The text in the top left “Front Template” edit
+box will be <code>Edit to customize&lt;br&gt;</code> together with the content of the old
+card, maybe just a <code>{{Front}}</code>, maybe something more complex.</p>
+<p>We want the hearing comprehension cards for notes where we have
+downloaded the pronunciation. We use the method described as
+<a href="http://ankisrs.net/docs/manual.html#conditionalreplacement">Conditional Replacement</a> in the
+<a href="http://ankisrs.net/docs/manual.html">Anki manual</a>.</p>
+<p>Replace the whole content of the top left “Front Template” box, with
+<blockquote><pre><code>{{#Audio}}
+Listen.
+{{Audio}}
+{{/Audio}}</code></pre></blockquote>
+and the content of the bottom left “Front Template” box with
+<blockquote><pre><code>Listen.
+{{Audio}}
+<div>{{Front}}</div>
+<div>{{Back}}</div>
+</code></pre></blockquote></p>
+<p>Next, to get rid of the generic “Card n” name, click on the “More”
+button at the bottom and select “Rename”. In the dialog, pick a
+descriptive name.</p>
+<p>The <code>{{#Audio}}</code>/<code>{{/Audio}}</code> pair in the front template means we will
+only get this card for notes where we have already downloaded
+something.  In this simple case, this pair is not necessary, but when
+other fields, like an ID, a hint or the front text are added, this
+becomes necessary. Using it here, too, guards against surprises later.</p>
+<p>This example assumes the standard field names. When you see <code>{Unknown
+field NN}</code> in the boxes on the right, you must change the names  to
+those of your note, as listed in the  “Edit Current” window.</p>
+                
+	</div>
+
+</article>
+
+      <footer>
+        <div class="line"></div>
+        <span class="by"><a href="https://github.com/ospalh">ospalh</a>
+        maintains <a href="https://github.com/ospalh/anki-addons">anki-addons</a></span>
+        <a href="http://tutorialzine.com/" class="tmpl">Original
+        template: Tutorialzine</a>
+      </footer>
+    </section>
+  
+</body>
+</html>
