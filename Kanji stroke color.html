@@ -43,31 +43,32 @@
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/anki-addons/images/stroke%20color.png" alt="The word ausruhen: and a colored stroke order diagram for 休" />
-		  <figcaption>Write 休 in this order.</figcaption>
+		  <img src="/anki-addons/images/stroke%20color.png" alt="The word Zustand: and a colored stroke order diagram for 況" />
+		  <figcaption>Write 況 in this order.</figcaption>
 		</figure>
 
                 
-                <p>This is a quick hack to show colored stroke order diagrams. You need
-to put stroke order diagram svgs in
-<code>Anki/addons/kanji-colorize-indexed</code>. Then they are shown when you use
-the template <code>{{kanjiColor:NN}}</code>.</p>
+                <p>Show colored stroke order diagrams on the desktop client, including
+variants.</p>
 <h2>Alternative</h2>
 <p>This add-on serves a similar purpose as
-<a href="http://cayennes.github.com">cayennes</a>’
- <a href="https://github.com/cayennes/kanji-colorize/tree/master/anki">add-on</a>
- part of the kanji-colorize project.</p>
-<h3>Pros</h3>
+<a href="http://cayennes.github.com">cayennes</a>’ <a href="https://ankiweb.net/shared/info/1964372878">Kanji
+colorizer</a>. (View the code
+<a href="https://github.com/cayennes/kanji-colorize/">on githhub</a>.)</p>
+<h3>Pros for this add-on</h3>
 <ul>
+<li>Can show stroke variants</li>
 <li>Does not need another field in the model</li>
 <li>Keeps the collection.media folder clean.</li>
-<li>Somewhat simple to exchange the whole set with another color
-  scheme. Just bend one link to another directory.</li>
 </ul>
 <h3>Cons</h3>
 <ul>
-<li>The core function, color, is not working on AnkiWeb/AnkiDroid</li>
-<li>The set-up of Cayennes' add-on may be easier on the add-on side.</li>
+<li>With this add-on, the core function, color, is not working on
+  AnkiWeb/AnkiDroid/AnkiMobile.</li>
+</ul>
+<h3>Difference</h3>
+<ul>
+<li>This add-on shows all characters in the input field, not just the first.</li>
 </ul>
 <h3>Without the add-on</h3>
 <p>When a construction like <code>&lt;div
@@ -87,11 +88,83 @@ of <a href="https://github.com/nicolas-raoul/Anki-Android">AnkiDroid</a>. I have
 added the equivalent of this addon, giving colored stoke order
 diagrams on AnkiDroid. You should merge this branch into the newest
 version of AnkiDroid, not just use that branch as-is.</p>
-<h2>Diagrams</h2>
-<p>The diagrams can be produced with either Cayennes'
+<h2>Usage</h2>
+<p>Use the template “<code>kanjiColor</code>” to see the diagrams. In the template
+editor in the (front or back) template, where it says “<code>{{Kanji}}</code>”,
+change it to “<code>{{kanjiColor:Kanji}}</code>”. When you use another field name
+for you kanji, use that instead.</p>
+<h2>Variants</h2>
+<p>There are three more templates, that show variant stroke order
+diagrams:</p>
+<h3>kanjiColorJinmei and kanjiColorKaisho</h3>
+<p>Using either “<code>{{kanjiColorJinmei:Kanji}}</code>” or
+“<code>{{kanjiColorKaisho:Kanji}}</code>”, the Jinmei or Kaisho variant drawings
+are shown, using the normal version when there is no variant.</p>
+<h3>kanjiColorRest</h3>
+<figure>
+<img src="images/three_旺.png" alt="A larger colored  stroke order diagram of
+旺. Below two smaller diagrams of that character. In the bottom
+diagrams the third stroke is shorter. The bottom left diagram shows
+the vertical sroke on the rigt drawn last.">
+<figcaption>For 「旺」, there are two variant forms.</figcaption>
+</figure>
+
+<p>Using “<code>{{kanjiColorRest:Kanji}}</code>” displays all variants of a given
+kanji, and nothing when there is no variant. The variants are also
+drawn smaller.</p>
+<p>Typically you put this below a standard “<code>{{kanjiColor:Kanji}}</code>”: Like
+that you always get the normal version and when there are variants,
+you see them, too. For example the template for the images uses
+<blockquote><pre><code>&lt;div&gt;{{kanjiColor:Kanji}}&lt;/div&gt;
+{{kanjiColorRest:Kanji}}</code></pre></blockquote></p>
+<blockquote class="nb">The <code>kanjiColorRest</code> template wraps the
+diagrams in a `<div>` element, if there are any.</blockquote>
+
+<h2>Changing properties</h2>
+<h3>Size</h3>
+<p>The size of the displayed diagrams can be changed in the add-on’s
+<a href="https://github.com/ospalh/anki-addons/blob/master/Kanji%20stroke%20color.py">source file</a>.
+Use the “Tools/Add-ons/Kanji stroke color/Edit...” menu item to open
+it. Set the size in the line “<code>kanji_size = 200</code>”. The size of the
+variants shown with the “kanjiColorRest” can be set in the “<code>rest_size
+= 120</code>” line.</p>
+<h3>Colors</h3>
+<p>In the <code>addons</code> folder, there is a sub-folder named
+<code>stroke-order-kanji</code>, that contains the file <code>_kanji_style.css</code>, along
+with the kanji SVG files. Change the colors in this file. Use a text
+editor like Wordpad, a local CSS file editor or a web service like
+<a href="http://css-color-replace.orca-multimedia.de/">CSSColorEditor</a>.</p>
+<p>The kanji diagrams use different CSS classes. The strokes and stroke
+numbers have classes <code>stroke_numN</code> (<code>stroke_num1</code>, <code>stroke_num2</code>,
+...). The strokes have the class <code>stroke_path</code>, the numbers,
+<code>stroke_number</code>.</p>
+<p>Some stroke groups also have classes. Open an SVG
+file in a text (XML) editor for details. These classes are used for
+the shadow effect below.</p>
+<h3>Other effects</h3>
+<p>The SVG files load and run the script file <code>_kanji_script.js</code> from the
+<code>stroke-order-kanji</code> folder. This files does nothing in the standard
+installation. There is also a file <code>_kanji_script_shadow.js</code>, that
+adds a shadow effect to the strokes, when renamed, where the shadow
+color indicates the group. This file can be used as an inspiration or
+as the basis for other effects. Animations seem possible.</p>
+<blockquote class="nb">The shadow effect may not work correctly on all
+operating systems.</blockquote>
+
+<p>When you try the shadow effect file and the results look ugly, copy
+back the original
+<a href="https://raw.github.com/ospalh/kanji-colorize/etree/kanjicolorizer/extra/_kanji_script.js"><code>_kanji_script.js</code></a>
+file.</p>
+<h3>Diagrams</h3>
+<p>New diagrams with can be produced with either Cayennes'
 <a href="https://github.com/cayennes/kanji-colorize/">kanji-colorize</a> script
-or with <a href="https://github.com/ospalh/kanji-colorize">my fork</a> of it.</p>
-<p>Both use the <a href="http://kanjivg.tagaini.net/">KanjiVG</a> data set as the base.</p>
+or with <a href="https://github.com/ospalh/kanji-colorize">my fork</a> of it. The
+diagrams that are shipped with the add-on are done with the <code>--mode
+css</code> switch.</p>
+<h3>Restart</h3>
+<p>For all of these changes to take effect, you must restart Anki.</p>
+<h2>Data source</h2>
+<p>The diagrams use <a href="http://kanjivg.tagaini.net/">KanjiVG</a> data set as the base.</p>
                 
 	</div>
 

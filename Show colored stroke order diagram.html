@@ -48,26 +48,33 @@
 		</figure>
 
                 
-                <p>This is a work in progress that is intended to replace my
-<a href="Kanji%20stroke%20colour.html">Kanji stroke color</a> add-on and possibly
-coexist with <a href="http://cayennes.github.com">cayennes</a>’
-<a href="https://github.com/cayennes/kanji-colorize/tree/master/anki">add-on</a>,
-this one used on desktop clients, cayennes’ on AnkiWeb and mobile
-devices.</p>
-<h3>Goals</h3>
-<ul>
-<li>Use one xml file as the data base.</li>
-<li>Extract svgs from that xml and colorize on the fly</li>
-<li>Make it possible to use different colors at different times, by
-  using an image as template.</li>
-<li>Add other effects, such as shadows, or possibly animation, on the fly. Again, with
-  different parameters at different times.</li>
-<li>Use this as a normal template or to replace the svgs/images from
-  cayennes’ add-on</li>
-</ul>
+                <p>This was an idea about an add-on that might have replaced my
+<a href="Kanji%20stroke%20color.html">Kanji stroke color</a> add-on</p>
+<h2>Goals</h2>
+<h3>One xml file</h3>
+<p>The idea was to put all kanji stroke data svg into a single XML file
+and to extract svgs from that and colorize them the fly.</p>
+<p>There wasn't really much reason for this. So i won't do it.</p>
+<h3>Different colors at different times.</h3>
+<p>I wanted to make it possible to use different colors at different times, by
+using an image as template.</p>
+<p>The newest version of
+<a href="Kanji%20stroke%20color.html">Kanji stroke color</a> offers the
+possibility to change the colors. Not through an image template but
+through the css file <a href="https://github.com/ospalh/anki-addons/blob/master/stroke-order-kanji/_kanji_style.css"><code>_kanji_style.css</code></a>.</p>
+<h3>Other effects</h3>
+<p>Add other effects, such as shadows, or possibly animation, on the
+fly. Again, with different parameters at different times.</p>
+<p>Dto. Put effects into
+<a href="https://github.com/ospalh/anki-addons/blob/master/stroke-order-kanji/_kanji_script.js"><code>_kanji_script.js</code></a>. Look
+at
+<a href="https://github.com/ospalh/kanji-colorize/blob/etree/kanjicolorizer/extra/_kanji_script_shadow.js"><code>_kanji_script_shadow.js</code></a>
+for an idea how to indicate the groups with colored
+shadows. Unfortunately this appears to not work correctly on Macs.</p>
 <h2>Data set</h2>
-<p>This uses the <a href="http://kanjivg.tagaini.net/">KanjiVG</a> kanji stroke
-order data set as the base.</p>
+<p>This uses – or would have used – the
+<a href="http://kanjivg.tagaini.net/">KanjiVG</a> kanji stroke order data set as
+the base.</p>
                 
 	</div>
 
