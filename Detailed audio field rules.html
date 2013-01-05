@@ -84,7 +84,8 @@ fields are:</p>
   up the space to get “Example” and look for that field to get the
   text.</li>
 </ul>
-<p>To get  Chinese
+<p>To get Japanese pronunciations from
+<a href="http://japanesepod101.com">JapanesePod101.com</a> or Chinese
 pronunciations from <a href="http://leo.org">LEO.org</a> there has to be the
 reading stored in the note. The detailed rules are:</p>
 <ul>
@@ -112,7 +113,6 @@ reading stored in the note. The detailed rules are:</p>
 </ul>
 <p>All of these field names are not case sensitive. For example, “expression”,
 “auDIO” or “SOUND” will work.</p>
-<p>At the moment, there is no good source of Japanese pronunciations.</p>
 <p>The field names are defined in the lists in the file
 “<a href="https://github.com/ospalh/anki-addons/blob/master/downloadaudio/get_fields.py"><code>downloadaudio/get_fields.py</code></a>”
 in the add-ons folder. That folder can be displayed through the
@@ -139,12 +139,13 @@ morefields">these fields</span>:</p>
 <li>The plain rule matches the field  “Expression” to the field
   “Audio”. The GoogleTTS downloader will work from the expression and
   download into the audio field.</li>
+<li>The readings rule matches the field  “Reading” to the field
+  “Audio”. The Japanesepod downloader will work from the reading and
+  download into the audio field, too.</li>
 <li>The plain substring rule matches the field “”例文” to the field
   “例文 Audio”</li>
 <li>For the fields “Deutsch” and “Zusatz” (and the audio fields
   themselves), nothing is downloaded.</li>
-<li>Currently nothing is downloaded for the “Reading” field, as there is
-  no source for Japanese audio that uses split kanji/kana.</li>
 </ul>
 <h3>Model “Land, state etc.”</h3>
 <p>For my world-wide geography deck, i use  <span class="qtbase
