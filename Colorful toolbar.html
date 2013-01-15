@@ -58,6 +58,19 @@ replaced by an icon tool bar.</p>
 <p>This also adds a few more menu items and adds icons to the menus (not on Macs).
 The tool bars can be shown and hidden via the "View" menu, the “Decks
 Study Add Browse” functions can also be reached through the "Go" menu.</p>
+<h2>Last card</h2>
+<p>The add-on has one feature that is normally hidden: a last card
+button.</p>
+<p>When the button between the “mark” and “bury” buttons has been clicked
+and the arrow is green instead of gray, clicking on one of the answer
+buttons (“Again”, “Good” &amp;c.), takes you to the deck options screen
+instead of showing another card.</p>
+<p>To show this button, edit the add-on
+<a href="https://github.com/ospalh/anki-addons/blob/master/Colorful%20toolbar.py">source</a>
+by activating the “Tools/Add-ons/Colorful toolbars/Edit...” menu item.</p>
+<p>Remove the <code>#</code> and the space at the beginning of the  <code>#
+show_toggle_last = True</code>-line  and add a <code>#</code> (and a space) to the
+<code>show_toggle_last = False</code> line. Click “Save” and restart Anki.</p>
 <h2>Variants</h2>
 <figure style="width:562px;" class="clear">
 
