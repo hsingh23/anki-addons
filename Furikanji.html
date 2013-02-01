@@ -64,40 +64,8 @@ render kanji <em>above</em> the kana. This is useful for listening comprehension
 <p>To use this, put  <code>{{furikanji:Field name}}</code> instead of
 <code>{{furigana:Field name}}</code> in the template.</p>
 <p>The ruby element has the additional class <code>furikanji</code>. So special
-styling can be added. For example, markers that show the beginning and
-end of a specific block.</p>
-<figure>
-<img src="images/furikanji-desktop.png" alt="Text: 起きなよいい加減お
-with きなよいいかげん as ruby and きなよいいかげん with 起きなよいい加
-減お as ruby. The kanji of the ruby are marked with vertical bars.">
-<figcaption>
-Example use of furigana and furikanji. The source of the text is an
-Anki-2-ified version of the <a
-href="http://subs2srs.sourceforge.net/">sub2srs</a> example deck 「時
-を掛ける少女」.
-</figcaption>
-</figure>
-
-<p>To use furikanji, with the markers shown, i use
-<blockquote class=lsting><pre><code>.redish { color: #a00;}
-body:not(.mobile) .furikanji:before, body:not(.mobile) .furikanji:after {
-    font-size: 50%;
-    position: relative;
-    bottom: 2rem;
-    width: 0px;
-    vertical-align: baseline;
-}
-body:not(.mobile) .furikanji:before { content : "|"}
-body:not(.mobile) .furikanji:after { content : "|"}
-.mobile .furikanji {color: #268bd2;}</code></pre></blockquote>
-as styling and
-<blockquote class=lsting><pre><code>&lt;div&gt;{{Image}}&lt;/div&gt;
-{{Audio}}
-&lt;div class="nhg lnsz"&gt;{{furigana:Reading}}&lt;/div&gt;
-&lt;div class="nhg redish lnsz"&gt;{{furikanji:Reading}}&lt;/div&gt;</code></pre></blockquote>
-as back template. The <code>body:not(.mobile)</code> bit of the selector and the
-setting for <code>.mobile</code> can be dropped when not using the
-<a href="#droid">AnkiDroid patch</a>.</p>
+styling can be added. See the
+<a href="Complex%20classes.html">complex classes</a> page for examples.</p>
 <figure>
 <img src="images/furikanji-web.png" alt="Text: 起きなよいい加減お with
 with きなよいいかげん as ruby and 起[お]きなよいい 加減[かげん], with square brackets.">

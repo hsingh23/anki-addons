@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ospalh’s Anki2 addons – Quick note and deck buttons</title>
+    <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
+    <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
+    <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
+    
+    <script src="/anki-addons/scripts/less-1.3.0.min.js" type="text/javascript"></script>
+    <!-- Internet Explorer HTML5 enabling script: -->
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <style type="text/css"> .clear {zoom: 1;display: block;} figure img{display:block;} </style>
+    <![endif]-->
+  </head>
+  <body>
+    <section id="page">
+      <header>
+        <nav class="clear">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/anki-addons/">Anki add-ons</a></li>
+            
+            <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
+            
+            <li><a href="https://github.com/ospalh/anki-addons/blob/master/Quick note and deck buttons.py" class="code">Add-on source</a></li>
+
+
+          </ul>
+        </nav>
+      
+    <h1>Quick note and deck buttons</h1>
+    
+    <h3>An Anki2 add-on</h3>
+    
+
+      </header>
+      
+<article id="quick_buttons" class="clear">
+	<div class="articleBody">
+
+		<figure>
+		  <img src="/anki-addons/images/quick_buttons.png" alt="The top of the add card dialog with a few extra buttons" />
+		  <figcaption>Select your favourite model or deck.</figcaption>
+		</figure>
+
+                
+                <p>This add-on adds a few buttons to the right of the select note type
+button and the select deck button at the top of the add card dialog.</p>
+<p>Click on them to select your favourite model or note type.</p>
+<blockquote class="nb">You will have to modify the add-on source to
+addapt this to your deck and model names.</blockquote>
+
+<h2>Setup</h2>
+<p>After downloading, you have to modify the <code>Quick note and deck
+buttons.py</code> file. Trigger the “Tools/Add-ons/Open Add-ons
+Folder...” menu item, pick out that file and open it with your
+favourite source editor or trigger “Tools/Add-ons/Quick note and deck
+buttons/Edit...” to use Anki’s built-in editor.</p>
+<p>There are two bits of code that should be changed, marked with the
+commets <code># Set up here...</code> and <code># ... and here ...</code>. A knowledge of
+<a href="http://www.python.org/">Python</a> <a href="http://docs.python.org/2/tutorial/index.html">syntax</a> may be helpful to set this up, but following the
+examples and only changing text inside of quotation marks should work.</p>
+<h3>Lists of dictionaries</h3>
+<p>The parts that should be changed are called
+<a href="http://docs.python.org/2/tutorial/introduction.html#lists">lists</a> of
+<a href="http://docs.python.org/2/tutorial/datastructures.html#dictionaries">dictionaries</a>. The
+lists are marked with square bracktets, <code>[</code> and <code>]</code>, the dictionaries
+with curly braces, <code>{</code> <code>}</code>. Each dictionary describes one button.</p>
+<p>Each of these button dictonaries must contain at least two key-value
+pairs:</p>
+<ul>
+<li>A <code>"label"</code>. The vaule after the <code>:</code> sets up the name shown in the
+  button. Use quotation marks with an extra <code>u</code> before them to define
+  a unicode string. I would suggest using short texts, such as single
+  characters.</li>
+<li>A <code>"name"</code>. This is the name of the model for dicts in the
+  <code>model_buttons</code> list and the name of the deck in the <code>deck_buttons</code>
+  list. Make sure that these names are correct. Cut-and-paste
+  the names if possible.</li>
+</ul>
+<p>For more options read the comments in the
+<a href="https://github.com/ospalh/anki-addons/blob/master/Quick%20note%20and%20deck%20buttons.py">source file</a>.</p>
+<h2>Notes</h2>
+<blockquote class="nb">At the moment, it looks ugly on
+Macs.</blockquote>
+
+<p>This add-on is an expansion of the Quick change Note buttons add-on. The code
+is based on that version, by Steve AW. Many thanks, for the code and
+also for the idea in the first place.</p>
+                
+	</div>
+
+</article>
+
+      <footer>
+        <div class="line"></div>
+        <span class="by"><a href="https://github.com/ospalh">ospalh</a>
+        maintains <a href="https://github.com/ospalh/anki-addons">anki-addons</a></span>
+        <a href="http://tutorialzine.com/" class="tmpl">Original
+        template: Tutorialzine</a>
+      </footer>
+    </section>
+  
+</body>
+</html>

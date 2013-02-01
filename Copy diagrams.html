@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Ospalh’s Anki2 addons – Edit media</title>
+    <title>Ospalh’s Anki2 addons – Copy diagrams</title>
     <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
     <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
     <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
@@ -26,37 +26,39 @@
             <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
-            <li><a href="https://github.com/ospalh/anki-addons/blob/master/Edit%20media.py" class="code">Add-on source</a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/blob/master/Copy%20diagrams.py" class="code">Add-on source</a></li>
 
 
           </ul>
         </nav>
       
-    <h1>Edit media</h1>
+    <h1>Copy diagrams</h1>
     
     <h3>An Anki2 add-on</h3>
     
 
       </header>
       
-<article id="editmedia" class="clear">
+<article id="copy_diagrams" class="clear">
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/anki-addons/images/eep.png" alt="Screenshot of the sweep audio editor." />
-		  <figcaption>Edit files with sweep</figcaption>
+		  <img src="/anki-addons/images/embed_暑.png" alt="A colored stroke order diagram of 暑 and the text &lt;embed width=&#34;200&#34; height=&#34;200&#34; title=&#34;Standard&#34; src=&#34;暑.svg&#34;&gt;&lt;/embed&gt;" />
+		  <figcaption>Use &lt;emded&gt; tags to display SVGs.</figcaption>
 		</figure>
 
                 
-                <p>Edit media files with an external editor. At the moment this provides
-a way to edit audio files with
-<a href="http://www.metadecks.org/software/sweep/">sweep</a>.</p>
-<p>This is basically the same as the <a href="Sweep.html">Sweep</a> add-on.</p>
-<p>Trigger the <code>Edit/Media/Edit audio</code> menu item to start sweep with the
-audio files of the current card. Then edit them there and save. Replay
-in Anki to hear the effect.</p>
-<p><a href="http://www.jargon.net/jargonfile/u/UTSL.html">UTSL</a>. The editor to
-use can be changed close to the top of the plugin file.</p>
+                <p>This is a chimera of parts of my
+<a href="Kanji%20stroke%20color.html">Kanji stroke color</a> and Cayennens’
+original
+<a href="https://ankiweb.net/shared/info/1964372878">Kanji Colorizer</a>. The
+name is misleading, it does not copy anything, but fills the
+collection with embed tags for my version of the SVGs of the colored
+stroke order diagrams.</p>
+<p>The SVGs themselves are not copied. The paths in the collection are
+also wrong. I used it once to make my Kanji deck useable with an
+unpatched AnkiDroid and am done with this now. It will stay in this
+pretty much useles state.</p>
                 
 	</div>
 
