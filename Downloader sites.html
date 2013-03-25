@@ -73,6 +73,14 @@ words.</p>
 version of the text enterend, even when it is misspelled.</p>
 <p>Another disadvantage is that it is a robot voice. It may hide
 idiosyncrasies of the phrase or word.</p>
+<p>For Chinese, the Google TTS download is skipped by default, because
+the <a href="https://ankiweb.net/shared/info/3448800906">Chinese support</a>
+add-on downloads those, too. When you don’t use that add-on or want to
+download from Googl TTS with this add-on anyway, you can switch it
+back on by changing the <code>False</code> in the <code>get_chinese</code> line near the
+head of the
+<a href="https://github.com/ospalh/anki-addons/blob/master/downloadaudio/downloaders/google_tts.py"><code>googl_tts.py</code></a>
+file to <code>True</code>.</p>
 <h2><span id="jpod">Japanesepod</span></h2>
 <p>Downloads audio provided by
 <a href="http://www.japanesepod101.com/">JapanesePod101</a>.  This is the same
@@ -107,24 +115,6 @@ available...” spiel. The add-on will then store a
 <a href="http://en.wikipedia.org/wiki/Cryptographic_hash_function">hash</a> for
 this file. When the same file is seen again, it is quietly dropped and
 you may receive a “Nothing downloaded” message.</p>
-<h2>Leo</h2>
-<p>These audio files come from
-<a href="http://www.leo.org/index_en.html">LEO GmbH</a>, originaly founded by the
-<a href="http://www.in.tum.de/en.html">Department of Informatics</a> of the
-<a href="http://www.tum.de/en/homepage/"><span class="qtbase tu">TU</span> München</a>.
-They offer “five (<a href="http://www.leo.org/index_en.html">sic</a>)
-dictionaries”, German↔Chinese, German↔English, German↔French,
-German↔Italian, German↔Russian and German↔Spanish. Of these seven
-languages, they have audio files for Chinese, English, French, German
-and Spanish. I could not find words for Italian and Russian, but they
-may be added at some point.</p>
-<h3>Chinese</h3>
-<p>The Chinese pronunciations use a version of pinyin with tone
-numbers. Learners of Chinese should install the
-<a href="https://ankiweb.net/shared/info/3448800906">Chinese support</a>
-add-on. That add-on brings along the <a href="http://cjklib.org/">cjklib</a>,
-which is then used to transforms pinyin with accents into the right
-form with numbers.</p>
 <h2>Macmillan</h2>
 <p>This downloader gets  pronunciations from the
 <a href="http://www.macmillandictionary.com/">Macmillan Dictionary</a> site.</p>
@@ -142,6 +132,9 @@ version instead.</p>
 <p>American English pronunciations from the
 <a href="http://www.merriam-webster.com/info/index.htm">Merriam-Webster</a>
 online dictionary.</p>
+<h2>Oxford Advanced American Dictionary</h2>
+<p>American English pronunciations from
+<a href="http://oaadonline.oxfordlearnersdictionaries.com/">Oxford Advanced American Dictionary</a>.</p>
 <h2>Wiktionary</h2>
 <p><a href="http://www.wiktionary.org">Wiktionary</a> is the dictionary branch of Wikipedia.</p>
 <p>The add-on tries to download words for every language. Where you get
@@ -149,9 +142,9 @@ any results is hard to say.</p>
 <p>As these sound files are all uploaded by users, it is possible (even
 if unlikely) that some files do not contain what the should. They
 <em>might</em> even contain obsecnities. The
-<a href="http://en.wikipedia.org/wiki/Wikipedia:Content_disclaimer">Content disclaimer</a>
+<a href="http://en.wikipedia.org/wiki/Wikipedia:Content_disclaimer">content disclaimer</a>
 from Wikipedia applies. If you encounter an incorrect file, the best
-way to proceed is to clean up the wiktionary page in
+way to proceed is to clean up the Wiktionary page in
 question.</p>
 <p>The different language versions of Wiktionary add audio clips in
 different ways to their word pages. When the add-on did not download a

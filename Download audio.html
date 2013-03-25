@@ -78,8 +78,8 @@ add-on, a dialog will appear asking for a language code. Here you
 should select the language you are learning, not your native language.</p>
 <blockquote class="nb">When setting the language, use language
 codes. Do <em>not</em> use country domain names. For example, use
-<code>zh</code> for Chinese, <em>not</em>
-<code>cn</code>.</blockquote>
+<code>ja</code> for Japanese, <em>not</em>
+<code>jp</code>.</blockquote>
 
 <p>A list of audio codes can – unsprprisingly – be found at
 <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">Wikipedia</a>.</p>
@@ -137,12 +137,10 @@ window. Text: Requestst send to the download sites. Reading. Edit texts:
 夫 おっと, Text: Expression. Edit text 夫.">
 <figcaption>Edit Japanese text.</figcaption>
 </figure>
-When learning Japanese or Chinese, when there is a “Reading” field,
+When learning Japanese, when there is a “Reading” field,
 the text used as request and shown in the dialog is split into the
-base text and the reading.</p>
-<p>For Chinese the base text is usually just hanzi, the reading
-pinyin. For Japanese, the screen text calls the base text “kanji” for
-simplicity, but it often contains kana as well.</p>
+base text and the reading. See the
+<a href="Split%20reading.html">split reading page</a> for more deatils.</p>
 <p>For decks like that shown in in the first example
 you should use the “Note audio” mode: most dictionaries have
 pronunciations for verbs without “to” and for nouns without
@@ -199,31 +197,24 @@ languages with different decks. See also the
 <a href="http://ankisrs.net/docs/dev/manual.html#deckoptions">Anki manual</a>.</p>
 <h3><span id="tags">Using tags</span></h3>
 <p>When a note has a tag in the form “<code>lang_&lt;NN&gt;</code>” (e.g. “<code>lang_en</code>” for
-English, “<code>lang_zh</code>” Chinese), this language code (that is “<code>en</code>” or
- “<code>zh</code>”) is used for the download.</p>
+English, “<code>lang_fr</code>” for French), this language code (that is “<code>en</code>” or
+ “<code>fr</code>”) is used for the download.</p>
 <h3>Supported languages</h3>
 <p>The languages this add-on supports depends on the languages of the
 dictionaries used.</p>
 <p>At the moment, you can get pronunciations for</p>
 <ul>
-<li>Chinese (Mandarin, i think) (<code>zh</code>)  from <a href="http://leo.org">LEO.org</a>,</li>
 <li>English (<code>en</code>) from <a href="http://beolingus.org">BeoLingus</a>,
-  <a href="http://leo.org">LEO.org</a>,
-  <a href="http://www.macmillandictionary.com/dictionary/">Macmillan Dictionary</a> and
-  <a href="http://merriam-webster.com">Merriam-Webster</a></li>
-<li>French (<code>fr</code>) from <a href="http://leo.org">LEO.org</a></li>
-<li>German (<code>de</code>) from <a href="http://beolingus.org">BeoLingus</a>,
-  <a href="http://www.duden.de">Duden</a> and <a href="http://leo.org">LEO.org</a></li>
-<li>Japanese (<code>ja</code>) fram <a href="japanesepod101.com">JapanesePod</a></li>
+  <a href="http://www.macmillandictionary.com/dictionary/">Macmillan Dictionary</a>,
+  <a href="http://merriam-webster.com">Merriam-Webster</a> and
+  <a href="http://oaadonline.oxfordlearnersdictionaries.com/">Oxford Advanced American Dictionary</a>.</li>
+<li>German (<code>de</code>) from <a href="http://beolingus.org">BeoLingus</a> and
+  <a href="http://www.duden.de">Duden</a></li>
+<li>Japanese (<code>ja</code>) fram <a href="http://japanesepod101.com">JapanesePod</a></li>
 <li>Spanish (<code>es</code>) from <a href="http://beolingus.org">BeoLingus</a></li>
 </ul>
-<p>There is the potential for</p>
-<ul>
-<li>Italian  (<code>it</code>) and</li>
-<li>Russian  (<code>ru</code>),</li>
-</ul>
-<p>but i think <a href="http://leo.org">LEO</a> is only offering a text dictionary
-for those two languages, not their own audio files.</p>
+<p>There was a downloader for <a href="http://leo.org">LEO</a>, but since they
+updated their site in early 2013, it no longer works.</p>
 <p>Google translate list over 60 languages for text translations. It
 seems unlikely that they offer text-to-speech services for more. The
 simplest way to see if GoogleTTS works for your target language is to
@@ -237,7 +228,7 @@ agreeing to a license, but they keep the copyright of those providing
 them. While i see no problem with using them privately, especially for
 educational purposes, re-publishing, for example by uploading a shared
 deck to AnkiWeb, is most likely prohibited by those rights.</p>
-<p>As exceptions is wiktionary. Those files are usually available under
+<p>An exceptions is Wiktionary. Those files are usually available under
 the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike
 License</a>. See the
 <a href="http://wikimediafoundation.org/wiki/Terms_of_use">Wikimedia Terms of Use</a>.</p>
@@ -265,8 +256,8 @@ every card. There are a few reasons for this:</p>
 <h2>Improvements</h2>
 <p>Bugs and other issues can be reported at the
 <a href="https://github.com/ospalh/anki-addons/issues?state=open">github repository</a>
-(pull requests with patches welcome) or possibly at a
-<a href="http://no.such-domain.nope/NN">Google Groups thread</a> i may start soon.</p>
+(pull requests with patches welcome) or the add-ons
+<a href="https://groups.google.com/d/topic/anki-addons/DMgTHkhnhow/discussion">Google Groups thread</a>.</p>
 <h3>Audio processing</h3>
 <p>The standard installation saves the files as they are received, which
 works well enough. Nothing more is needed.</p>
@@ -292,8 +283,7 @@ directory.</p>
   automatically add the 「る」 for 一段動詞.  This will most likely
   not by implemented any time soon.</li>
 <li>More talking dictionaries. Links welcome. Mention them in the
-  dedicated
-  <a href="https://groups.google.com/forum/?fromgroups=#!topic/ankisrs-users/yyixoEYy8tc">Google Groups thread</a>. Python
+  <a href="https://github.com/ospalh/anki-addons/tree/master/downloadaudio/processors">Google Groups thread</a>. Python
   files welcome. Take a look at
   <a href="https://github.com/ospalh/anki-addons/tree/master/downloadaudio/downloaders"><code>downloadaudio/downloaders</code></a>,
   write a new class derived from <code>AudioDownloader</code> and send me a pull

@@ -90,16 +90,17 @@ setting for <code>.mobile</code> can be dropped when not using the
 <a href="http://www.fileformat.info/info/unicode/char/30fb/index.htm">・</a>」
 </span> to separate the kana for different kanji. For example, for the
 word 「中黒」 the text 「<code>なか・ぐろ</code>」 is used in a reading field.</p>
-<p>An alternative is to use the <a href="">Japanese Support</a> addon to automatically
-generated readings. THey are usually by word, and have to be
-rearranged slightly by hand. In the example, you would type the kanji
-「中黒」 into the “Expression” field. With a tab or mouse click, the
-“Reading” field would be filled with 「中黒[なかぐろ]」. For this
+<p>An alternative is to use the
+<a href="https://ankiweb.net/shared/info/3918629684">Japanese Support</a> addon
+to automatically generate readings. They are usually by word, and have
+to be rearranged slightly by hand. In the example, you would type the
+kanji「中黒」 into the “Expression” field. With a tab or mouse click,
+the “Reading” field would be filled with 「中黒[なかぐろ]」. For this
 trick to work, this string would have to changed to 「中[なか]黒[ぐろ]」
-by hand, by adding an extra pair of square brackets and dragging the
-「なか」 into them.</p>
+by hand, by adding an extra pair of square brackets and dragging
+the「なか」 into them.</p>
 <p>The adding of the interpunct can be done using two CSS pseudo-classes,
-“<code>:after</code>” and “<code>:last-child</code>”.:
+“<code>:after</code>” and “<code>:last-child</code>”:
 <blockquote class=lsting><pre><code>&lt;div class="interpuncts"&gt;{kana:Reading}}&lt;/div&gt;</code></pre></blockquote></p>
 <blockquote class=lsting><pre><code>.interpuncts .kana:after{content:"・";}
 .interpuncts .kana:last-child:after{content: none;}</code></pre></blockquote>
@@ -108,9 +109,8 @@ by hand, by adding an extra pair of square brackets and dragging the
 method furigana can be used as well, with “<code>{{furigana:Reading}}</code>”.</p>
 <h2>Furigana on hover</h2>
 <p>This method works without this add-on as well.</p>
-<p>To show furigana only when the mouse hovers above it use</p>
-<blockquote class=lsting><pre><code>&lt;div class="kanjihover">{{furigana:Reading}}&lt;/div></code></pre></blockquote>
-
+<p>To show furigana only when the mouse hovers above it use:
+<blockquote class=lsting><pre><code>&lt;div class="kanjihover"&gt;{{furigana:Reading}}&lt;/div&gt;</code></pre></blockquote></p>
 <blockquote class=lsting><pre><code>.kanjihover rt{visibility: hidden;}
 .kanjihover ruby:hover rt {visibility: visible;}</blockquote>
 
@@ -122,8 +122,6 @@ method furigana can be used as well, with “<code>{{furigana:Reading}}</code>�
 ruby:hover rt {visibility: visible;}</blockquote>
 
 <p></pre></code></p>
-<p>The amount of padding may have to be adjusted stlightly to make the
-lines not jump when moving in or out with the mouse.</p>
                 
 	</div>
 

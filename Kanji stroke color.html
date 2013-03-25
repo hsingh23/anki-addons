@@ -50,7 +50,7 @@
                 
                 <p>Show colored stroke order diagrams on the desktop client, including
 variants.</p>
-<h2>Alternative</h2>
+<h2>Alternatives</h2>
 <p>This add-on serves a similar purpose as
 <a href="http://cayennes.github.com">cayennes</a>’ <a href="https://ankiweb.net/shared/info/1964372878">Kanji
 colorizer</a>. (View the code
@@ -65,11 +65,13 @@ colorizer</a>. (View the code
 <ul>
 <li>With this add-on, the core function, color, is not working on
   AnkiWeb/AnkiDroid/AnkiMobile.</li>
+<li>Installing the add-on is somewhat tricky.</li>
 </ul>
-<h3>Difference</h3>
-<ul>
-<li>This add-on shows all characters in the input field, not just the first.</li>
-</ul>
+<blockquote class="nb">
+This add-on needs extra Python packages. See the
+“<a href="Batteries.html">Batteries</a>” page for details.
+</blockquote>
+
 <h3>Without the add-on</h3>
 <p>When a construction like <code>&lt;div
 class="strokes"&gt;{{kanjiColor:Kanji}}&lt;/div&gt;</code> is used on the cards and
@@ -88,6 +90,13 @@ of <a href="https://github.com/nicolas-raoul/Anki-Android">AnkiDroid</a>. I have
 added the equivalent of this addon, giving colored stoke order
 diagrams on AnkiDroid. You should merge this branch into the newest
 version of AnkiDroid, not just use that branch as-is.</p>
+<h3>Other alternative</h3>
+<p>I have personally given up use of this add-on. While i still like my
+way of coloring the diagrams, with the actual colors defined via CSS,
+i did not like the changes to AnkiDroid needed.</p>
+<p>I have now copied the svgs to the media folder and added the kanji –
+with variants in an extra field – to my collection with the even more
+hackisch/broken <a href="Copy%20diagrams.html">Copy diagrams</a> add-on.</p>
 <h2>Usage</h2>
 <p>Use the template “<code>kanjiColor</code>” to see the diagrams. In the template
 editor in the (front or back) template, where it says “<code>{{Kanji}}</code>”,
@@ -157,7 +166,7 @@ back the original
 <a href="https://raw.github.com/ospalh/kanji-colorize/etree/kanjicolorizer/extra/_kanji_script.js"><code>_kanji_script.js</code></a>
 file.</p>
 <h3>Diagrams</h3>
-<p>New diagrams with can be produced with either Cayennes'
+<p>New diagrams can be produced with either Cayennes'
 <a href="https://github.com/cayennes/kanji-colorize/">kanji-colorize</a> script
 or with <a href="https://github.com/ospalh/kanji-colorize">my fork</a> of it. The
 diagrams that are shipped with the add-on are done with the <code>--mode
