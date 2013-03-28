@@ -26,7 +26,7 @@
             <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
-            <li><a href="https://github.com/ospalh/anki-addons/blob/master/Classy%20correct.py" class="code">Add-on source</a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/blob/master/classy_correct.py" class="code">Add-on source</a></li>
 
 
           </ul>
@@ -43,13 +43,48 @@
 	<div class="articleBody">
 
 		<figure>
-		  <img src="/anki-addons/images/classy.png" alt="Snippets of Python code" />
-
+		  <img src="/anki-addons/images/classy.png" alt="Sceenshot with three lines of text. 1, 2: „Die Hauptstadt von Mosambik ist Maputo.“, 3.:  „Mabuto“, the „b“ is red, the rest green" />
+		  <figcaption>The red and green marking is more reserved and matches the color scheme.</figcaption>
 		</figure>
 
                 
-                <p>This add-on has been abandoned. The goal was to add a class to the
-typed-in answer, so that it could easily be modified.</p>
+                <p>This add-on removes the explicit styling from the corrected answer and
+replaces it with the classes <code>typedgood</code> or <code>typedbad</code>. It is up to
+the user, but possible now, to set up the style for this in the card
+template.</p>
+<blockquote class="nb">
+This add-on relies on a change i suggested for Anki, but that has not
+been implemented. You have to use my ospalh-special branch for this
+add-on to do anything.
+</blockquote>
+
+<p>The important bits of the card template used were
+<blockquote><pre><code>.typedbad {color: #dc322f;}
+.typedgood {color: #859900;}</code></pre></blockquote></p>
+<p>Other bits were
+<blockquote><pre><code>.card{
+  font-family: 'Demos LT';
+  font-size: 24px;
+  text-align: center;
+  color: #657b83;
+  background-color: #fdf6e3;
+}
+#corrected span:hover  { text-shadow: 1px 2px 5px #657b83; }</code></pre></blockquote></p>
+<figure>
+<img src="images/stylish.png"
+alt="Sceenshot with the same text as above. In line three, the „b“ is
+in black with red background, the rest
+black with green background." />
+<figcaption>
+    The old style.
+</figcaption>
+</figure>
+
+<p>The basic color scheme in the example images is called
+<a href="http://ethanschoonover.com/solarized">Solarized</a>.</p>
+<p>The original style is to show the the text in black with red or green
+background, which may not look too good with color schemes that don’t
+use black text.</p>
                 
 	</div>
 
