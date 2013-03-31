@@ -50,7 +50,7 @@
                 
                 <p>This add-on adds a few buttons to the right of the select note type
 button and the select deck button at the top of the add card dialog.</p>
-<p>Click on them to select your favourite model or note type.</p>
+<p>Click on them to select your favourite model (note type) or deck.</p>
 <blockquote class="nb">You will have to modify the add-on source to
 adapt this to your deck and model names.</blockquote>
 
@@ -61,7 +61,7 @@ Folder...” menu item, pick out that file and open it with your
 favourite source editor or trigger “Tools/Add-ons/Quick note and deck
 buttons/Edit...” to use Anki’s built-in editor.</p>
 <p>There are two bits of code that should be changed, marked with the
-commets <code># Set up here...</code> and <code># ... and here ...</code>. A knowledge of
+commets <code># Set up here...</code> and <code># ... and here</code>. A knowledge of
 <a href="http://www.python.org/">Python</a>
 <a href="http://docs.python.org/2/tutorial/index.html">syntax</a> may be helpful
 to set this up, but following the examples and only changing text
@@ -69,9 +69,10 @@ inside of quotation marks should work.</p>
 <h3>Lists of dictionaries</h3>
 <p>The parts that should be changed are called
 <a href="http://docs.python.org/2/tutorial/introduction.html#lists">lists</a> of
-<a href="http://docs.python.org/2/tutorial/datastructures.html#dictionaries">dictionaries</a>. The
-lists are marked with square bracktets, <code>[</code> and <code>]</code>, the dictionaries
-with curly braces, <code>{</code> <code>}</code>. Each dictionary describes one button.</p>
+<a href="http://docs.python.org/2/tutorial/datastructures.html#dictionaries">dictionaries</a>.
+The lists are marked with square bracktets, <code>[</code> and <code>]</code>, the
+dictionaries with curly braces, <code>{</code> <code>}</code>. Each dictionary describes one
+button.</p>
 <p>Each of these button dictonaries must contain at least two key-value
 pairs:</p>
 <ul>
@@ -87,9 +88,6 @@ pairs:</p>
 <p>For more options read the comments in the
 <a href="https://github.com/ospalh/anki-addons/blob/master/Quick%20note%20and%20deck%20buttons.py">source file</a>.</p>
 <h2>Notes</h2>
-<blockquote class="nb">At the moment, it looks ugly on
-Macs.</blockquote>
-
 <p>This add-on is an expansion of the Quick change Note buttons add-on. The code
 is based on that version, by Steve AW. Many thanks, for the code and
 also for the idea in the first place.</p>
