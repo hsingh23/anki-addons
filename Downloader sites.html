@@ -48,13 +48,13 @@
 <article id="sites" class="clear">
 	<div class="articleBody">
                 
-                <p>These sites are tried to rerieve audio clips:</p>
+                <p>These sites are tried to retrieve audio clips:</p>
 <h2>Beolingus</h2>
 <p><a href="http://dict.tu-chemnitz.de/doc/about.en.html">Beolingus</a> is an online
 dictionary provided by the
 <a href="http://www.tu-chemnitz.de/en/"><span class="qtbase tu">TU</span> Chemnitz</a>.</p>
 <p>The site provides German↔English, German↔Portuguese and German↔Spanish
-dictionaries and pronuctiations in English, German and Spanish.</p>
+dictionaries and pronunciations in English, German and Spanish.</p>
 <h2>Duden</h2>
 <p>The <a href="http://www.duden.de">Duden</a> is pretty much the reference
 dictionary for Germany. Many of the audio files are from the
@@ -66,22 +66,22 @@ of record</a>.</p>
 <a href="http://translate.google.com/#auto/en/">Google Translate</a>.  It is the
 only text-to-speech services among the downloaders. The advantage is
 that this will almost always get you an audio version of the text
-enterend – when Google TTS works for your language at all – and can be
+entered – when Google TTS works for your language at all – and can be
 used to get an audio version of whole sentences, not just single
 words.</p>
 <p>The disadvantage is that that this will almost always get you an audio
-version of the text enterend, even when it is misspelled.</p>
+version of the text entered, even when it is misspelled.</p>
 <p>Another disadvantage is that it is a robot voice. It may hide
 idiosyncrasies of the phrase or word.</p>
 <p>For Chinese, the Google TTS download is skipped by default, because
 the <a href="https://ankiweb.net/shared/info/3448800906">Chinese support</a>
 add-on downloads those, too. When you don’t use that add-on or want to
-download from Googl TTS with this add-on anyway, you can switch it
+download from Google TTS with this add-on anyway, you can switch it
 back on by changing the <code>False</code> in the <code>get_chinese</code> line near the
 head of the
 <a href="https://github.com/ospalh/anki-addons/blob/master/downloadaudio/downloaders/google_tts.py"><code>googl_tts.py</code></a>
 file to <code>True</code>.</p>
-<h2><span id="jpod">Japanesepod</span></h2>
+<h2><span id="jpod">JapanesePod</span></h2>
 <p>Downloads audio provided by
 <a href="http://www.japanesepod101.com/">JapanesePod101</a>.  This is the same
 data source as
@@ -95,7 +95,7 @@ the Anki-1 plugins “Audio Download” and “Audio Download (Extension)”,
 as mentioned on
 <a href="https://groups.google.com/forum/#!searchin/ankisrs/breen/ankisrs/UHGEpSkWf9k/3bFJ71AimCEJ">Google Groups</a>.</p>
 <h3><span id="blacklist">Blacklist</span></h3>
-<p>The download mechanism at Japanesepod can’t really say
+<p>The download mechanism at JapanesePod can’t really say
 <a href="nopagehere.html">“no”</a> in the usual way. Instead it sends you an
 audio clip that tells you “The audio for this clip is currently not
 available. It will be recorded and uploaded shortly. Thank you for
@@ -124,7 +124,7 @@ downloaded. Try downloading
 “<a href="http://en.wikipedia.org/wiki/House_music">house</a>” or “thunder”. The
 sound effects should be marked in the bubble help text in the review.</p>
 <p>Macmillan Dictionary is available in a British English and an American
-Engilsh version. To counterbalance the American English of
+English version. To counterbalance the American English of
 Merriam-Webster, the standard install of the add-on uses the British
 version. See <a href="#sitesonoff">below</a> how to turn on the American English
 version instead.</p>
@@ -141,14 +141,14 @@ online dictionary.</p>
 any results is hard to say.</p>
 <p>As these sound files are all uploaded by users, it is possible (even
 if unlikely) that some files do not contain what the should. They
-<em>might</em> even contain obsecnities. The
+<em>might</em> even contain obscenities. The
 <a href="http://en.wikipedia.org/wiki/Wikipedia:Content_disclaimer">content disclaimer</a>
 from Wikipedia applies. If you encounter an incorrect file, the best
 way to proceed is to clean up the Wiktionary page in
 question.</p>
 <p>The different language versions of Wiktionary add audio clips in
 different ways to their word pages. When the add-on did not download a
-pronunciation that is present on a specifc Wiktionary page, please
+pronunciation that is present on a specific Wiktionary page, please
 <a href="https://github.com/ospalh/anki-addons/issues?state=open">report this</a>. I
 will then try to find a way to extract that word, so that it should be
 downloaded with an updated version of the add-on.</p>
@@ -168,7 +168,7 @@ used, nothing will be downloaded from these sites.</p>
 American English, add a “<code>#</code>” character to the line
 “<code>MacmillanBritishDownloader(),</code>” and remove it from the line “<code>#
 MacmillanAmericanDownloader(),</code>”. (Do not remove the comma or
-parantheses. Do not make other changes unless you know what you are
+parentheses. Do not make other changes unless you know what you are
 doing.)</p>
 <p>After you have made changes to the file and saved it, you need to
 restart Anki for the changes to take effect.</p>

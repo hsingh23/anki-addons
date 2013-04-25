@@ -82,16 +82,21 @@ as styling and
 {{Audio}}
 &lt;div class="nhg lnsz"&gt;{{furigana:Reading}}&lt;/div&gt;
 &lt;div class="nhg redish lnsz"&gt;{{furikanji:Reading}}&lt;/div&gt;</code></pre></blockquote>
-as back template. The <code>body:not(.mobile)</code> bit of the selector and the
-setting for <code>.mobile</code> can be dropped when not using the
-<a href="Furikanji.html#droid">AnkiDroid patch</a>.</p>
+as back template.</p>
+<p>The <code>body:not(.mobile)</code> bit of the selector and the setting for
+<code>.mobile</code> can be dropped when not using the
+<a href="Furikanji.html#droid">AnkiDroid patch</a> or when using a newer version
+of Android. Those selectors are a hack to mark the kanji that is only
+needed on older versions of Android (up to about version 3.0). For
+newer versions of Android and the newest versions of AnkiDroid, the
+CSS used for the desktop client should work.</p>
 <h2>Separator for kana</h2>
 <p>Some people like to use the interpunct <span class="qtbase nakaguro">「
 <a href="http://www.fileformat.info/info/unicode/char/30fb/index.htm">・</a>」
 </span> to separate the kana for different kanji. For example, for the
 word 「中黒」 the text 「<code>なか・ぐろ</code>」 is used in a reading field.</p>
 <p>An alternative is to use the
-<a href="https://ankiweb.net/shared/info/3918629684">Japanese Support</a> addon
+<a href="https://ankiweb.net/shared/info/3918629684">Japanese Support</a> add-on
 to automatically generate readings. They are usually by word, and have
 to be rearranged slightly by hand. In the example, you would type the
 kanji「中黒」 into the “Expression” field. With a tab or mouse click,

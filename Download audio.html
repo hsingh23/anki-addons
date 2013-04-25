@@ -69,7 +69,7 @@ download language code Set the code of the language you are
 learning. (zh for Chinese, en for English ...) Below a text input line
 with text ja.">
 <figcaption>Set the code of the language you are learning on
-startup.</figcaption>
+start-up.</figcaption>
 </figure>
 
 <p>The <span class="qtbase nolangcode">first time</span> you <span
@@ -81,7 +81,7 @@ codes. Do <em>not</em> use country domain names. For example, use
 <code>ja</code> for Japanese, <em>not</em>
 <code>jp</code>.</blockquote>
 
-<p>A list of audio codes can – unsprprisingly – be found at
+<p>A list of audio codes can – unsurprisingly – be found at
 <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">Wikipedia</a>.</p>
 <h2>Setup – Fields</h2>
 <p>This add-on adds the pronunciation to a field named “Audio”. You will
@@ -114,7 +114,7 @@ manual download.</p>
 <p>Side audio loads audio that will appear on the currently visible
 side. During the <a href="#review">review</a>, it will hide the text it used to
 get the sounds. Use this while learning from your native language to
-the foreign language, or when trying to recoginize spoken words.</p>
+the foreign language, or when trying to recognize spoken words.</p>
 <h3>Note audio</h3>
 <p>Note audio fetches sounds for all audio fields of the current note.
 During the <a href="#review">review</a>, the texts used to
@@ -122,7 +122,7 @@ retrieve the sounds are shown.</p>
 <h3>Manual audio</h3>
 <figure>
 <img src="images/update_annex.png" alt="Anki Download audio dialog
-window. Text: Requestst send to the download sites. Front. Edit text:
+window. Text: Requests send to the download sites. Front. Edit text:
 to annex. The to is marked..">
 <figcaption>Edit the request before it is send.</figcaption>
 </figure>
@@ -133,14 +133,14 @@ before the request is send.</p>
 <p><span  class="clear" />
 <figure>
 <img src="images/update_kanji_kana.png" alt="Anki Download audio dialog
-window. Text: Requestst send to the download sites. Reading. Edit texts:
+window. Text: Requests send to the download sites. Reading. Edit texts:
 夫 おっと, Text: Expression. Edit text 夫.">
 <figcaption>Edit Japanese text.</figcaption>
 </figure>
 When learning Japanese, when there is a “Reading” field,
 the text used as request and shown in the dialog is split into the
 base text and the reading. See the
-<a href="Split%20reading.html">split reading page</a> for more deatils.</p>
+<a href="Split%20reading.html">split reading page</a> for more details.</p>
 <p>For decks like that shown in in the first example
 you should use the “Note audio” mode: most dictionaries have
 pronunciations for verbs without “to” and for nouns without
@@ -155,7 +155,7 @@ even when the <a href="#tags">tag</a> is not set for the current note.</p>
 notification appears.</p>
 <figure><img src="images/devise.png"
 alt="The review dialog. The buttons are described in the main text">
-<figcaption>Decide what to do whith each file.</figcaption>
+<figcaption>Decide what to do with each file.</figcaption>
 </figure>
 
 <p>After a successful download, a dialog appears. It lists the
@@ -210,7 +210,7 @@ dictionaries used.</p>
   <a href="http://oaadonline.oxfordlearnersdictionaries.com/">Oxford Advanced American Dictionary</a>.</li>
 <li>German (<code>de</code>) from <a href="http://beolingus.org">BeoLingus</a> and
   <a href="http://www.duden.de">Duden</a></li>
-<li>Japanese (<code>ja</code>) fram <a href="http://japanesepod101.com">JapanesePod</a></li>
+<li>Japanese (<code>ja</code>) from <a href="http://japanesepod101.com">JapanesePod</a></li>
 <li>Spanish (<code>es</code>) from <a href="http://beolingus.org">BeoLingus</a></li>
 </ul>
 <p>There was a downloader for <a href="http://leo.org">LEO</a>, but since they
@@ -228,7 +228,7 @@ agreeing to a license, but they keep the copyright of those providing
 them. While i see no problem with using them privately, especially for
 educational purposes, re-publishing, for example by uploading a shared
 deck to AnkiWeb, is most likely prohibited by those rights.</p>
-<p>An exceptions is Wiktionary. Those files are usually available under
+<p>An exception is Wiktionary. Those files are usually available under
 the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike
 License</a>. See the
 <a href="http://wikimediafoundation.org/wiki/Terms_of_use">Wikimedia Terms of Use</a>.</p>
@@ -248,21 +248,21 @@ every card. There are a few reasons for this:</p>
   code to work around this problem, needed or not.)</li>
 <li>As there may be many files downloaded for each word, i think  the
   review of the downloaded material should not be skipped.</li>
-<li>This is especially true for Japanesepod, where you may want to
+<li>This is especially true for JapanesePod, where you may want to
   <a href="Downloader%20sites.html#blacklist">blacklist</a> some downloads.</li>
 <li>Contemplating the downloaded data when you get it note by note is
   also potentially useful in remembering the words.</li>
 </ul>
 <h2>Improvements</h2>
 <p>Bugs and other issues can be reported at the
-<a href="https://github.com/ospalh/anki-addons/issues?state=open">github repository</a>
+<a href="https://github.com/ospalh/anki-addons/issues?state=open">GitHub repository</a>
 (pull requests with patches welcome) or the add-ons
 <a href="https://groups.google.com/d/topic/anki-addons/DMgTHkhnhow/discussion">Google Groups thread</a>.</p>
 <h3>Audio processing</h3>
 <p>The standard installation saves the files as they are received, which
 works well enough. Nothing more is needed.</p>
 <p>But the add-on contains code to do some simple audio processing,
-normalising the files and changing the output format. This code is not
+normalizing the files and changing the output format. This code is not
 used by default, as it requires two extra Python packages,
 <a href="http://pydub.com/">PyDub</a> and
 <a href="http://pypi.python.org/pypi/pysox/0.3.6.alpha">pysox</a>. Pysox has

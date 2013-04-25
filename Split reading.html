@@ -52,7 +52,7 @@
 <a href="https://ankiweb.net/shared/info/3918629684">Japanese Support</a> add-on
 has been installed first.</p>
 <p>This add-on assumes that there is a field called “Reading” and that
-this reading field contains both the Japanese word itself (kanj and
+this reading field contains both the Japanese word itself (kanji and
 kana written in line) and the reading of the kanji (furigana).  The
 furigana should be in square brackets
 (“<a href="http://www.fileformat.info/info/unicode/char/5b/index.htm">[</a>”,
@@ -64,7 +64,7 @@ there is a reading. For example, for the expression「この間」, the
 reading field should contain 「<code>この 間[あいだ]</code>」.  Note the space
 between 「の」 and 「間」 and the square brackets around the 「あいだ」.</p>
 <p>Most of the time these details are not important. This square-bracket
-style is exactly what is porduced by the Japanese Support add-on. When
+style is exactly what is produced by the Japanese Support add-on. When
 creating cards you typically just type the expression into its field,
 and when you go to the meaning field to type the translation, the
 reading field is filled automatically in the right format.</p>
@@ -72,19 +72,19 @@ reading field is filled automatically in the right format.</p>
 <p>Some people store just the kana in the “Reading” field, for example by
 using <code>%r</code> instead of <code>%e[%r]</code> to fill the field in the settings of
 the <a href="https://ankiweb.net/shared/info/934748696">Yomichan</a> add-on.
-With this set-up, downloads from Japanesepod will not work without
+With this set-up, downloads from JapanesePod will not work without
 change. By default the add-on expects to find the kanji in the reading
 field.</p>
 <figure>
 <img src="images/update_kanji_kana.png" alt="Anki Download audio dialog
-window. Text: Requestst send to the download sites. Reading. Edit texts:
+window. Text: Requests send to the download sites. Reading. Edit texts:
 夫 おっと, Text: Expression. Edit text 夫.">
 <figcaption>Kanji and kana in different edit fields.</figcaption>
 </figure>
 
 <p>Set the <code>meaning_in_reading_field</code> switch to <code>False</code> in the
 <a href="https://github.com/ospalh/anki-addons/blob/master/downloadaudio/get_fields.py#L45"><code>get_fields.py</code></a>
-file when you use this set-up. With this the Japanesepod downloader
+file when you use this set-up. With this the JapanesePod downloader
 takes the kanji and kana from separate fields. Check with the “Manual
 audio” menu item, there should be a line with two edit fields and the
 kanji in the left and the kana in the right field.</p>
