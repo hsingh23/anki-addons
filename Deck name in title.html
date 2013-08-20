@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Ospalh’s Anki2 addons – Deck name in title</title>
+    <title>Deck name in title – Ospalh’s Anki2 addons</title>
     <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
     <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
     <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
@@ -23,49 +23,55 @@
             <li><a href="/anki-addons/">Anki add-ons</a></li>
             
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
-            <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/tarball/master" class="download-button">Project tarball</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
-            <li><a href="https://github.com/ospalh/anki-addons/blob/master/Deck%20name%20in%20title.py" class="code">Add-on source</a></li>
+      <li><a href="https://github.com/ospalh/anki-addons/blob/master/deck_name_in_title.py" class="code">Add-on source</a></li>
 
-            <li><a href="https://ankiweb.net/shared/info/3895972296" class="code">AnkiWeb download</a></li>
+      <li><a href="https://ankiweb.net/shared/info/3895972296">AnkiWeb</a></li>
+      <li><span>ID: 3895972296</span></li>
 
 
           </ul>
         </nav>
       
-    <h1>Deck name in title</h1>
-    
-    <h3>An Anki2 add-on</h3>
-    
+  <h1>Deck name in title</h1>
+  
+  <h3>An Anki2 add-on</h3>
+  
 
       </header>
       
 <article id="title" class="clear">
-	<div class="articleBody">
+  <div class="articleBody">
 
-		<figure>
-		  <img src="/anki-addons/images/deck_title.png" alt="A window title: “Lernen::1 日本語::1 和独::VHS – Anki”" />
-		  <figcaption>The window title shows a deck name.</figcaption>
-		</figure>
+    <figure>
+      <img src="/anki-addons/images/deck_title.png" alt="A window title: “Lernen::1 日本語::1 和独::VHS – Anki”" />
 
-                
-                <p>Show the name of the deck you are currently learning in the window
+    </figure>
+
+    
+    <p>Show the name of the deck you are currently learning in the window
 title.</p>
-<p>When there is more than one profile, it also shows the current profile name.</p>
+<p>When there is only one profile, its name is not shown.</p>
+<p>Taking a hint from some other applications, the deck name or profile
+name is shown <em>before</em> the application name.</p>
 <h3>Setup</h3>
-<p>The behavior of the add-on can be changed in two points by editing
+<p>The behavior of the add-on can be changed in a few points by editing
 the
-<a href="https://github.com/ospalh/anki-addons/blob/master/Deck%20name%20in%20title.py">source file</a>:</p>
+<a href="https://github.com/ospalh/anki-addons/blob/master/deck_name_in_title.py">source file</a>:</p>
 <ul>
 <li>title_separator: What to print between the deck name and program
   name. Normally a spaced n-dash.</li>
 <li>show_subdeck: Whether to show the subdeck you have descended into
   during learning or only the deck you clicked on in the deck
   browser.</li>
+<li>subdeck_format: How the point between the selected deck and the one
+  descended into is marked. Standard is an en-dash between the two
+  colons.</li>
 </ul>
-                
-	</div>
+    
+  </div>
 
 </article>
 

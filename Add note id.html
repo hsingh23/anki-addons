@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Ospalh’s Anki2 addons – Add note id</title>
+    <title>Add note id – Ospalh’s Anki2 addons</title>
     <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
     <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
     <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
@@ -23,52 +23,53 @@
             <li><a href="/anki-addons/">Anki add-ons</a></li>
             
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
-            <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/tarball/master" class="download-button">Project tarball</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
-            <li><a href="https://github.com/ospalh/anki-addons/blob/master/Add%20note%20id.py" class="code">Add-on source</a></li>
+      <li><a href="https://github.com/ospalh/anki-addons/blob/master/add_note_id.py" class="code">Add-on source</a></li>
 
-            <li><a href="https://ankiweb.net/shared/info/1672832404" class="code">AnkiWeb download</a></li>
+      <li><a href="https://ankiweb.net/shared/info/1672832404">AnkiWeb</a></li>
+      <li><span>ID: 1672832404</span></li>
 
 
           </ul>
         </nav>
       
-    <h1>Add note id</h1>
-    
-    <h3>Make all cards unique</h3>
-    
+  <h1>Add note id</h1>
+  
+  <h3>Make all cards unique</h3>
+  
 
       </header>
       
 <article id="add_nid" class="clear">
-	<div class="articleBody">
+  <div class="articleBody">
 
-		<figure>
-		  <img src="/anki-addons/images/Note%20ID.png" alt="Name the first field is called Note ID" />
-		  <figcaption>Name the first field is called Note ID</figcaption>
-		</figure>
+    <figure>
+      <img src="/anki-addons/images/Note%20ID.png" alt="Name the first field is called Note ID" />
+     <figcaption>Name the first field is called Note ID</figcaption>
+    </figure>
 
-                
-                <p>A fix to the problem of synonyms.</p>
-<p>When adding new cards, the first field must be unique. But what about
+    
+    <p>A fix to the problem of synonyms.</p>
+<p>When adding new cards, the first field must be unique, but what about
 synonyms? Of course it is possible to add an explanation to the word
-to specify which is the meaning in this case. But a more elegant
+to specify which is the meaning in this case. A more elegant
 way is to add more fields to show which is the correct meaning in this
 case, for example with an example sentence.</p>
 <p>The solution is to add the number that Anki uses internally to
 identify the note to the note itself.</p>
 <p>To use, the first field in the card model must be named "Note ID".
-Then, when adding content, this field is automatically filled with the
-note id when you move the cursor to another field.</p>
+Then, when adding content, this field is automatically filled with a
+number based on the note id when you move the cursor to another field.</p>
 <h2>Menu</h2>
 <p>There is also an item in the Tools menu that goes through the whole
 collection and adds note ids to all empty Note ID fields. This is
 useful when adding the field to decks you already
 have. (<a href="http://www.jargon.net/jargonfile/u/UTSL.html">UTSL</a> to hide the
 menu item.)</p>
-                
-	</div>
+    
+  </div>
 
 </article>
 

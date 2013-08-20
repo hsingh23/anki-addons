@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Ospalh’s Anki2 addons – Local CSS</title>
+    <title>Local CSS and DIY night mode – Ospalh’s Anki2 addons</title>
     <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
     <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
     <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
@@ -23,34 +23,35 @@
             <li><a href="/anki-addons/">Anki add-ons</a></li>
             
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
-            <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/tarball/master" class="download-button">Project tarball</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
-            <li><a href="https://github.com/ospalh/anki-addons/blob/master/Local%20CSS%20and%20DIY%20night%20mode.py" class="code">Add-on source</a></li>
+      <li><a href="https://github.com/ospalh/anki-addons/blob/master/local_css_and_diy_night_mode.py" class="code">Add-on source</a></li>
 
-            <li><a href="https://ankiweb.net/shared/info/2587372325" class="code">AnkiWeb download</a></li>
+      <li><a href="https://ankiweb.net/shared/info/2587372325">AnkiWeb</a></li>
+      <li><span>ID: 2587372325</span></li>
 
 
           </ul>
         </nav>
       
-    <h1>Local CSS</h1>
-    
-    <h3>Adapt card styles to time and place</h3>
-    
+  <h1>Local CSS and DIY night mode</h1>
+  
+  <h3>Adapt card styles to time and place</h3>
+  
 
       </header>
       
 <article id="localcss" class="clear">
-	<div class="articleBody">
+  <div class="articleBody">
 
-		<figure>
-		  <img src="/anki-addons/images/three_styles.png" alt="An Anki review window, split and showing different fonts and color schemes in different parts." />
-		  <figcaption>The same card with different styles</figcaption>
-		</figure>
+    <figure>
+      <img src="/anki-addons/images/three_styles.png" alt="An Anki review window, split and showing different fonts and color schemes in different parts." />
+     <figcaption>The same card with different styles</figcaption>
+    </figure>
 
-                
-                <p>This loads the local CSS file <code>user_style.css</code> and adds the style to
+    
+    <p>This loads the local CSS file <code>user_style.css</code> and adds the style to
 the CSS set in the card templates.</p>
 <p>It also adds a few classes to the cards.</p>
 <p>With this, the look of the cards can be adapted to the time of day
@@ -66,9 +67,9 @@ as before.</p>
 <p>The add-on adds the classes <code>loc</code> to all cards. The model and template
 names of each card are reduced to the characters <code>a</code> to <code>z</code>, <code>A</code> to
 <code>Z</code>, <code>0</code> to <code>9</code> and <code>_</code> and added as classes as well, in the form of
-<code>model_NN</code> and <code>template_NN</code>. As an example, the second card (<code>card1</code>)
-of a model or note type called “Satz Japanese 日本語” and that is
-called “Hörübung” would have the CSS classes <code>loc card card1
+<code>model_NN</code> and <code>template_NN</code>. As an example, the second card of a
+model or note type called “Satz Japanese 日本語” and that is called
+“Hörübung” would have the CSS classes <code>loc card card2
 model_SatzJapanese template_Hrbung</code>. These classes can be used to
 build CSS selectors.</p>
 <h3>Standard use</h3>
@@ -76,9 +77,9 @@ build CSS selectors.</p>
 <code>user_sytle.css</code> file on that computer. You should use the CSS selector
 <code>.loc.card</code>. The example in the bottom of the image was done with
 <blockquote><pre><code>.loc.card{
-    font-family: Linux Biolinum O;
-    background-color: #ededff;
-    font-size: 58px;}</code></pre></blockquote></p>
+  font-family: Linux Biolinum O;
+  background-color: #ededff;
+  font-size: 58px;}</code></pre></blockquote></p>
 <blockquote class=nb> The selector in the style file must be more
 specific than the one used in the template in the collection. When a
 setup for <code>.card</code> is used in the template, the style file should use
@@ -112,8 +113,8 @@ green for normal cards and dark red for grammar cards. The standard
 cards use the the <code>.loc.card</code> selector described above. The model name
 of the grammar cards is “Grammatik VHS — Japanese” and so i used
 <blockquote><pre><code>.loc.card.model_grammatikvhsjapanese{
-    background-color: #64354c;
-    color: #d9b7ce;}</code></pre></blockquote>
+  background-color: #64354c;
+  color: #d9b7ce;}</code></pre></blockquote>
 to set up the pink-on-dark-red.</p>
 <h2>Night mode</h2>
 <p>The add-on adds a “Mode (extra class)” sub-menu to the “Edit” menu to
@@ -128,17 +129,16 @@ eir collection to make use of this.
 <p>The set-up is best done in the <code>user_style.css</code> file. To use
 white-on-black as a night mode alternative to standard black-on-white
 cards, you should add
-<blockquote><pre><code> .night.card.loc {
+<blockquote><pre><code>.night.card.loc {
   color: white;
-  background-color: black;
-}
+  background-color: black;}
 </code></pre></blockquote></p>
 <p>It is also possible to add definitions for <code>.night</code> in the card
 templates themselves. This way it will probably work with the
 AnkiDroid code i intend to write to bring night mode there.</p>
 <h3>More modes</h3>
 <p>More display modes can be used. Edit the
-<a href="https://github.com/ospalh/anki-addons/blob/master/Local%20CSS%20and%20DIY%20night%20mode.py">source file</a>.</p>
+<a href="https://github.com/ospalh/anki-addons/blob/master/local_css_and_diy_night_mode.py">source file</a>.</p>
 <p>Look for “<code>extra_classes_list</code>” near the top. Duplicate the <code>Night
 mode</code> line and change the texts <em>after</em> the <code>class</code> and <code>display</code>
 bits.</p>
@@ -148,8 +148,6 @@ use the light theme most of the time but sometimes want the dark
 theme. I also sometimes want to see the cards in black-on-white.</p>
 <p>The point here is that the dark scheme can’t really be derived from
 the light mode, so it <em>has</em> to be set explicitly in a style sheet.</p>
-<p>As i intend to use these modes on AnkiDroid, i have added them to the
-several models of my collection, rather than to <code>user_style.css</code>.</p>
 <p>The relevant bits of my templates look like this:
 <blockquote><pre><code>.card {
   color: #657b83;
@@ -182,8 +180,18 @@ user_style.css</code>.</p>
 <p>The user style is loaded when the profile is opened. To reload the
 style after a change go to the “Switch Profiles” dialog and re-open the
 profile.</p>
-                
-	</div>
+<h2>AnkiDroid</h2>
+<p>People that like to build their own AnkiDroid version can take a look
+at the
+<a href="https://github.com/ospalh/Anki-Android/tree/feature-diy-night-mode">branch</a>
+i have made a that sets extra classes for the night mode. That patch
+switches off the normal color reversal of the AnkiDroid night mode and
+entirely relies on the colors being changed in the notes’ CSS. Take a
+look at the code changes for details on how to set up the classes.</p>
+<p>It is probably a good idea to merge the branch into the newest
+AnkiDroid development branch rather than to use it as is.</p>
+    
+  </div>
 
 </article>
 

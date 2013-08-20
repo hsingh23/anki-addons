@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Ospalh’s Anki2 addons – Download audio</title>
+    <title>Download audio – Ospalh’s Anki2 addons</title>
     <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
     <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
     <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
@@ -25,34 +25,35 @@
             <li><a href="/anki-addons/">Anki add-ons</a></li>
             
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
-            <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/tarball/master" class="download-button">Project tarball</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
-            <li><a href="https://github.com/ospalh/anki-addons/blob/master/Download%20audio.py" class="code">Add-on source</a></li>
+      <li><a href="https://github.com/ospalh/anki-addons/blob/master/download_audio.py" class="code">Add-on source</a></li>
 
-            <li><a href="https://ankiweb.net/shared/info/3100585138" class="code">AnkiWeb download</a></li>
+      <li><a href="https://ankiweb.net/shared/info/3100585138">AnkiWeb</a></li>
+      <li><span>ID: 3100585138</span></li>
 
 
           </ul>
         </nav>
       
-    <h1>Download audio</h1>
-    
-    <h3>Hear what you learn</h3>
-    
+  <h1>Download audio</h1>
+  
+  <h3>Hear what you learn</h3>
+  
 
       </header>
       
 <article id="dlaudio" class="clear">
-	<div class="articleBody">
+  <div class="articleBody">
 
-		<figure>
-		  <img src="/anki-addons/images/Downloaded%20audio.png" alt="A dialog window. Six lines with different site icons, the word “hearth” and some more buttons. A bubble help with the text Source text: hearth From field: Front Source: Macmillan Variant: British" />
-		  <figcaption>One word where non-native speakers should look up the pronunciation.</figcaption>
-		</figure>
+    <figure>
+      <img src="/anki-addons/images/Downloaded%20audio.png" alt="A dialog window. Six lines with different site icons, the word “hearth” and some more buttons. A bubble help with the text Source text: hearth From field: Front Source: Macmillan Variant: British" />
+     <figcaption>Do you pronounce the –ear– like in hear? Or like earth? ...</figcaption>
+    </figure>
 
-                
-                <p>This add-on adds three menu items,</p>
+    
+    <p>This add-on adds three menu items,</p>
 <ul>
 <li>“Edit/Media/Note audio”</li>
 <li>“Edit/Media/Side audio” and</li>
@@ -98,9 +99,8 @@ note.</p>
 <a href="More%20audio%20cards.html">extra page</a>.</p>
 <h2>Downloading</h2>
 <figure>
-<img src="images/manual_audio.png" alt="Anki with a card shown and the
-mouse pointing to the menu item
-Edit/Media/Manual audio.">
+<img src="images/manual_audio.png" alt="The sub-menu Edit/Media is
+highlighted in Anki.">
 <figcaption>Use these menus when reviewing.</figcaption>
 </figure>
 
@@ -141,11 +141,6 @@ When learning Japanese, when there is a “Reading” field,
 the text used as request and shown in the dialog is split into the
 base text and the reading. See the
 <a href="Split%20reading.html">split reading page</a> for more details.</p>
-<p>For decks like that shown in in the first example
-you should use the “Note audio” mode: most dictionaries have
-pronunciations for verbs without “to” and for nouns without
-article. Delete these in the note audio dialog. For example download for
-“annex”, not for “to annex”.</p>
 <p>Along with the edit field or fields for the request text, the edit
 dialog also as a field to set the  language code. This can be used to
 download in a language different from that set for the current deck,
@@ -197,8 +192,8 @@ languages with different decks. See also the
 <a href="http://ankisrs.net/docs/dev/manual.html#deckoptions">Anki manual</a>.</p>
 <h3><span id="tags">Using tags</span></h3>
 <p>When a note has a tag in the form “<code>lang_&lt;NN&gt;</code>” (e.g. “<code>lang_en</code>” for
-English, “<code>lang_fr</code>” for French), this language code (that is “<code>en</code>” or
- “<code>fr</code>”) is used for the download.</p>
+English, “<code>lang_fr</code>” for French), this language code is used for the
+download.</p>
 <h3>Supported languages</h3>
 <p>The languages this add-on supports depends on the languages of the
 dictionaries used.</p>
@@ -213,13 +208,11 @@ dictionaries used.</p>
 <li>Japanese (<code>ja</code>) from <a href="http://japanesepod101.com">JapanesePod</a></li>
 <li>Spanish (<code>es</code>) from <a href="http://beolingus.org">BeoLingus</a></li>
 </ul>
-<p>There was a downloader for <a href="http://leo.org">LEO</a>, but since they
-updated their site in early 2013, it no longer works.</p>
 <p>Google translate list over 60 languages for text translations. It
 seems unlikely that they offer text-to-speech services for more. The
 simplest way to see if GoogleTTS works for your target language is to
 send a request or two and see (hear) if you get a useful reply.</p>
-<p>Lastly, <a href="wiktionary.org">Wiktionary</a> is asked with any language
+<p>Lastly, <a href="http://wiktionary.org">Wiktionary</a> is asked with any language
 code. The add-on may or may not find anything useful.</p>
 <p>More information in the <a href="Downloader%20sites.html">list of sites</a> used.</p>
 <h2>Private use</h2>
@@ -242,7 +235,7 @@ without ensuring you have the rights to do so.
 let it go through the whole collection and download something for
 every card. There are a few reasons for this:</p>
 <ul>
-<li>It appears that the Google TTS service throttles the number of reply
+<li>It appears that the Google TTS service throttles the number of replies
   it delivers when they requests are send too quickly. (At least the
   <a href="https://ankiweb.net/shared/info/301952613">AwesomTTS add-on</a> has
   code to work around this problem, needed or not.)</li>
@@ -256,8 +249,12 @@ every card. There are a few reasons for this:</p>
 <h2>Improvements</h2>
 <p>Bugs and other issues can be reported at the
 <a href="https://github.com/ospalh/anki-addons/issues?state=open">GitHub repository</a>
-(pull requests with patches welcome) or the add-ons
+or the add-ons
 <a href="https://groups.google.com/d/topic/anki-addons/DMgTHkhnhow/discussion">Google Groups thread</a>.</p>
+<p>Github pull requests with patches are welcome. The preferred way is to use
+git-flow and create a <code>feature</code> branch off the
+<a href="https://github.com/ospalh/anki-addons/tree/develop"><code>develop</code></a>
+branch.</p>
 <h3>Audio processing</h3>
 <p>The standard installation saves the files as they are received, which
 works well enough. Nothing more is needed.</p>
@@ -269,7 +266,7 @@ used by default, as it requires two extra Python packages,
 still alpha status, and installing it isn’t always easy, either.
 Hackers that do manage that may then want to take a look at the
 content of the
-“<a href="https://github.com/ospalh/anki-addons/tree/master/downloadaudio/processors"><code>downloadaudio/processors</code></a>”
+“<a href="https://github.com/ospalh/anki-addons/tree/develop/downloadaudio/processors"><code>downloadaudio/processors</code></a>”
 directory.</p>
 <h3>More ideas</h3>
 <p>Things that might be added in the future (but don’t hold your breath):</p>
@@ -283,14 +280,16 @@ directory.</p>
   automatically add the 「る」 for 一段動詞.  This will most likely
   not by implemented any time soon.</li>
 <li>More talking dictionaries. Links welcome. Mention them in the
-  <a href="https://github.com/ospalh/anki-addons/tree/master/downloadaudio/processors">Google Groups thread</a>. Python
-  files welcome. Take a look at
-  <a href="https://github.com/ospalh/anki-addons/tree/master/downloadaudio/downloaders"><code>downloadaudio/downloaders</code></a>,
+  <a href="https://groups.google.com/d/topic/anki-addons/DMgTHkhnhow/discussion">Google Groups thread</a>.
+  Python files welcome. Take a look at
+  <a href="https://github.com/ospalh/anki-addons/tree/develop/downloadaudio/downloaders"><code>downloadaudio/downloaders</code></a>,
   write a new class derived from <code>AudioDownloader</code> and send me a pull
-  request. Or just the <code>.py</code>-file.</li>
+  request. Or just the <code>.py</code>-file. There are already quite a number
+  of sources for English, so i will probably not add any more for that
+  language.</li>
 </ul>
-                
-	</div>
+    
+  </div>
 
 </article>
 

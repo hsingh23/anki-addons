@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Fix AnkiDroid’s negative review times – Ospalh’s Anki2 addons</title>
+    <title>Spanify text – Ospalh’s Anki2 addons</title>
     <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
     <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
     <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
@@ -26,41 +26,47 @@
             <li><a href="https://github.com/ospalh/anki-addons/tarball/master" class="download-button">Project tarball</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
-      <li><a href="https://github.com/ospalh/anki-addons/blob/master/fix_negative_review_times.py" class="code">Add-on source</a></li>
-
-      <li><a href="https://ankiweb.net/shared/info/3009264632">AnkiWeb</a></li>
-      <li><span>ID: 3009264632</span></li>
+      <li><a href="https://github.com/ospalh/anki-addons/blob/master/spanify.py" class="code">Add-on source</a></li>
 
 
           </ul>
         </nav>
       
-  <h1>Fix AnkiDroid’s negative review times</h1>
+  <h1>Spanify text</h1>
   
   <h3>An Anki2 add-on</h3>
   
 
       </header>
       
-<article id="fix_neg_times" class="clear">
+<article id="spanify" class="clear">
   <div class="articleBody">
 
     <figure>
-      <img src="/anki-addons/images/time_fix.png" alt="Some Python code" />
-     <figcaption>The code that is run.</figcaption>
+      <img src="/anki-addons/images/s1s2s3.png" alt="The Anki note editor button row has s1, s2 and s3 buttons." />
+     <figcaption>Three new buttons.</figcaption>
     </figure>
 
     
-    <p>This applies the fix for the
-<a href="http://code.google.com/p/ankidroid/issues/detail?id=1449">AnkiDroid problem</a>
-discussed in the Google Code issue tracker. When you see negative
-review times, either in AnkiDroid or in the statistics window of the
-desktop client, go there for information.</p>
-<p>This add-on simply applies the
-steps
-<a href="http://code.google.com/p/ankidroid/issues/detail?id=1449#c23">described in the thread</a>.</p>
-<blockquote class="nb">This only resets the times. It does not prevent
-the same problem from occuring again.</blockquote>
+    <p>Another add-on to add buttons to the note editor. This adds buttons to
+wrap text in spans.</p>
+<p>By default there are three buttons, “s1”, “s2” and “s3”, that wrap the
+text selected in a note’s field in <code>&lt;span class="styleN"&gt;</code>/<code>&lt;/span&gt;</code>
+tags. (<code>N</code> = 1, 2, 3). It is up to the user to set up the card
+styling to make use these classes.</p>
+<blockquote class="nb">
+The changes made by the add-on are invisible in the card editor, and
+on the cards, unless styling for the classes is added.
+</blockquote>
+
+<blockquote class="nb">
+Unlike the italic or bold buttons, clicking theese buttons twice does
+not un-wrap the text, but adds a second span.
+</blockquote>
+
+<p>This add-on is based on Thomas Tempé’s
+<a href="https://ankiweb.net/shared/info/999886206">strikethrough button</a>
+add-on.</p>
     
   </div>
 

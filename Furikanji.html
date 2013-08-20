@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Ospalh’s Anki2 addons – Furikanji</title>
+    <title>Furikanji – Ospalh’s Anki2 addons</title>
     <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
     <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
     <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
@@ -23,34 +23,35 @@
             <li><a href="/anki-addons/">Anki add-ons</a></li>
             
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
-            <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/tarball/master" class="download-button">Project tarball</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
-            <li><a href="https://github.com/ospalh/anki-addons/blob/master/Furikanji.py" class="code">Add-on source</a></li>
+      <li><a href="https://github.com/ospalh/anki-addons/blob/master/furikanji.py" class="code">Add-on source</a></li>
 
-            <li><a href="https://ankiweb.net/shared/info/2327947748" class="code">AnkiWeb download</a></li>
+      <li><a href="https://ankiweb.net/shared/info/2327947748">AnkiWeb</a></li>
+      <li><span>ID: 2327947748</span></li>
 
 
           </ul>
         </nav>
       
-    <h1>Furikanji</h1>
-    
-    <h3>An Anki2 add-on</h3>
-    
+  <h1>Furikanji</h1>
+  
+  <h3>An Anki2 add-on</h3>
+  
 
       </header>
       
-<article id="furikanji_and" class="clear">
-	<div class="articleBody">
+<article id="furikanji" class="clear">
+  <div class="articleBody">
 
-		<figure>
-		  <img src="/anki-addons/images/furikanji.png" alt="Sceenshot of text ふりがな with 振り仮名 as ruby." />
-		  <figcaption>Furikanji demo</figcaption>
-		</figure>
+    <figure>
+      <img src="/anki-addons/images/furikanji.png" alt="Sceenshot of text ふりかんじ with 振り漢字 as ruby." />
+     <figcaption>Furikanji demo</figcaption>
+    </figure>
 
-                
-                <p>This add-on adds support for furikanji, adds two other templates and
+    
+    <p>This add-on adds support for furikanji, adds two other templates and
 slightly changes the way kanji and readings are parsed.</p>
 <blockquote class=nb>
 This add-on is for use with the desktop
@@ -60,7 +61,7 @@ AnkiWeb may result in suboptimal layout.
 
 <h2>Furikanji</h2>
 <p>The template <code>furikanji</code> uses a standard reading field to
-render kanji <em>above</em> the kana. This is useful for listening comprehension.</p>
+render kanji <em>above</em> the kana.</p>
 <p>To use this, put  <code>{{furikanji:Field name}}</code> instead of
 <code>{{furigana:Field name}}</code> in the template.</p>
 <p>The ruby element has the additional class <code>furikanji</code>. So special
@@ -68,17 +69,16 @@ styling can be added. See the
 <a href="Complex%20classes.html">complex classes</a> page for examples.</p>
 <figure>
 <img src="images/furikanji-web.png" alt="Text: 起きなよいい加減お with
-with きなよいいかげん as ruby and 起[お]きなよいい 加減[かげん], with square brackets.">
-<figcaption>
-On AnkiWeb, the furikanji don’t work.
-</figcaption>
+きなよいいかげん as ruby and 起[お]きなよいい 加減[かげん], with
+square brackets.">
+<figcaption> On AnkiWeb, the furikanji don’t work. </figcaption>
 </figure>
 
 <p>As the furikanji rendering is done on the fly by the desktop client,
-it naturally does not work with AnkiWeb or AnkiDroid (or, presumably,
-the iOS client). Here the text is rendered as it is seen in the edit
-screen, with the square brackets.</p>
-<h3><span id="droid">Ospalh-special</span></h3>
+it does not work with AnkiWeb, AnkiDroid or AnkiMobile. There the text
+is rendered as it is seen in the edit screen, with the square
+brackets.</p>
+<h3><span id="droid">feature-furikanji</span></h3>
 <figure>
 <img src="images/furikanji-mydroid.png" alt="Text: 起きなよいい加減お
 with きなよいいかげん as ruby and きなよいいかげん with 起きなよいい加
@@ -89,14 +89,13 @@ AnkiDroid can be patched to use furikanji.
 </figure>
 
 <p>Daring spirits can use my
-<a href="https://github.com/ospalh/Anki-Android/tree/v2.1-dev-furikanji">branch</a>
+<a href="https://github.com/ospalh/Anki-Android/tree/feature-furikanji">branch</a>
 of the AnkiDroid
 <a href="https://github.com/ankidroid/Anki-Android/tree/v2.1-dev">development branch</a>.
 I have added the equivalent of this add-on, providing furikanji on
 AnkiDroid. You should merge this branch into the newest version of
-AnkiDroid, not just use that branch as-is. I forked this off the
-2.1 branch. Merging it into the 2.0 branch may or may not
-work.</p>
+AnkiDroid, not just use that branch as-is.</p>
+<p>This may not work with Android versions &lt; 3.0</p>
 <h2>Boxed and boxkana</h2>
 <figure>
 <img src="images/boxed.png" alt="Text: ausruhen and やすむ, the やす
@@ -116,7 +115,7 @@ template of a
 „<a href="http://www.kanji-lernen.de/">Die Kanji Lernen und Behalten</a>“ deck,
 the German version of “Remembering the Kanji”.</p>
 <p>These effects can be achieved by applying the formatting set in the
-<a href="https://github.com/ospalh/anki-addons/blob/master/Furikanji.py">source file</a>
+<a href="https://github.com/ospalh/anki-addons/blob/master/furikanji.py">source file</a>
 directly, together with <code>{{kana:Field NN}}</code>. The simple box should work
 everywhere, the boxkana should work on AnkiDroid, and possibly in
 AnkiWeb, when the web browser supports <code>&lt;ruby&gt;</code> tags.</p>
@@ -139,8 +138,8 @@ character class as kanji.</p>
 <li>This mechanism only work with Python version 2.7.</li>
 <li>As the other functions, this works only on the desktop client.</li>
 </ul>
-                
-	</div>
+    
+  </div>
 
 </article>
 

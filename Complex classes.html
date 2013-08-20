@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Ospalh’s Anki2 addons – Complex use of classes</title>
+    <title>Complex use of classes – Ospalh’s Anki2 addons</title>
     <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
     <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
     <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
@@ -27,7 +27,7 @@
   <li><a href="/anki-addons/Furikanji.html">Furikanji</a></li>
 
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
-            <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/tarball/master" class="download-button">Project tarball</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
 
@@ -67,29 +67,21 @@ href="http://subs2srs.sourceforge.net/">sub2srs</a> example deck 「時
 
 <p>To use furikanji, with the markers shown, i use
 <blockquote class=lsting><pre><code>.redish { color: #a00;}
-body:not(.mobile) .furikanji:before, body:not(.mobile) .furikanji:after {
+.furikanji:before, .furikanji:after {
     font-size: 50%;
     position: relative;
     bottom: 2rem;
     width: 0px;
     vertical-align: baseline;
 }
-body:not(.mobile) .furikanji:before { content : "|"}
-body:not(.mobile) .furikanji:after { content : "|"}
-.mobile .furikanji {color: #268bd2;}</code></pre></blockquote>
+.furikanji:before { content : "|"}
+.furikanji:after { content : "|"}</code></pre></blockquote>
 as styling and
 <blockquote class=lsting><pre><code>&lt;div&gt;{{Image}}&lt;/div&gt;
 {{Audio}}
 &lt;div class="nhg lnsz"&gt;{{furigana:Reading}}&lt;/div&gt;
 &lt;div class="nhg redish lnsz"&gt;{{furikanji:Reading}}&lt;/div&gt;</code></pre></blockquote>
 as back template.</p>
-<p>The <code>body:not(.mobile)</code> bit of the selector and the setting for
-<code>.mobile</code> can be dropped when not using the
-<a href="Furikanji.html#droid">AnkiDroid patch</a> or when using a newer version
-of Android. Those selectors are a hack to mark the kanji that is only
-needed on older versions of Android (up to about version 3.0). For
-newer versions of Android and the newest versions of AnkiDroid, the
-CSS used for the desktop client should work.</p>
 <h2>Separator for kana</h2>
 <p>Some people like to use the interpunct <span class="qtbase nakaguro">「
 <a href="http://www.fileformat.info/info/unicode/char/30fb/index.htm">・</a>」

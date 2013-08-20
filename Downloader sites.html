@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Ospalh’s Anki2 addons – Audio downloader sites</title>
+    <title>Audio downloader sites – Ospalh’s Anki2 addons</title>
     <link rel="icon" type="image/png" href="/anki-addons/images/オ.png"/>
     <link rel="apple-touch-icon" href="/anki-addons/images/オ.png"/>
     <link rel="stylesheet/less" type="text/css" href="/anki-addons/css/styles.less">
@@ -27,7 +27,7 @@
   <li><a href="/anki-addons/Download audio.html">Download audio</a></li>
 
             <li><a href="https://github.com/ospalh/anki-addons" class="code">GitHub project</a></li>
-            <li><a href="https://github.com/ospalh/anki-addons/tarball/master"><span>Project tarball</span></a></li>
+            <li><a href="https://github.com/ospalh/anki-addons/tarball/master" class="download-button">Project tarball</a></li>
             <li><a href="https://github.com/ospalh/anki-addons/zipball/master" class="download-button zip">Project zipball</a></li>
             
 
@@ -152,6 +152,21 @@ pronunciation that is present on a specific Wiktionary page, please
 <a href="https://github.com/ospalh/anki-addons/issues?state=open">report this</a>. I
 will then try to find a way to extract that word, so that it should be
 downloaded with an updated version of the add-on.</p>
+<h2><span id="not_forvo"><em>Not</em> Forvo</span></h2>
+<p>A number of people have asked for the crowd-sourced pronunciation site
+<a href="http://forvo.com">Forvo</a> to be added. While the pronunciations
+offered are usually quite useful (even if sometimes of a low audio
+quality), adding the site to this add-on does <em>not</em> work. Downloading
+from Forvo requires what is called an “API-key”. This key would have
+to be both kept secret and included in the published add-on source. A
+contardiction.</p>
+<p>(The way Forvo apparently intends this kind of key to be used is to
+add a service to a web site, rather than to a bit of free, published
+software. The web service owner would than keep eir hands on the key
+and hand out just the pronunciations. This add-on does not work this
+way.)</p>
+<p>My “<a href="Nachschlagen.html">Nachschlagen</a>” add-on adds a menu item too look
+up, but not download, words at Forvo.</p>
 <h2><span id="sitesonoff">Using different sites</span></h2>
 <p>The add-on loads the different downloaders through the list
 “<code>downloaders</code>” in the file “<a
